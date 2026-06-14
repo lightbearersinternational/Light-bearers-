@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>LBM Viral Engine | Light Bearers Media</title>
+  <style>
+    :root {
+      --gold: #D6B04A;
+      --navy: #2F4266;
+      --leaf: #8DAA3A;
+      --white: #FFFFFF;
+      --bg-deep: #0a0a14;
+      --card-bg: rgba(10, 10, 20, 0.75);
+      --text: #f5edd8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: radial-gradient(ellipse at 30% 20%, #1a1a35 0%, #0a0a14 70%);
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .main-card {
+      max-width: 750px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(47, 66, 102, 0.3);
+      box-shadow: 0 35px 70px -20px rgba(0,0,0,0.95), 0 0 50px rgba(47, 66, 102, 0.25);
+      border-radius: 2.5rem;
+      padding: 2rem 1.8rem;
+      color: var(--text);
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
+    .logo-svg {
+      width: 90px;
+      height: 90px;
+      transition: transform 0.3s ease;
+    }
+    .logo-svg:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #D6B04A, #f5d78c, #D6B04A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.5px;
+    }
+    .church-tag {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #b9ad8c;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      border-bottom: 1px dashed rgba(47, 66, 102, 0.4);
+      padding-bottom: 1rem;
+      letter-spacing: 0.3px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #e0d3b0;
+      margin-bottom: 0.4rem;
+      display: block;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    textarea, select, input {
+      width: 100%;
+      background: #0b0b1bcc;
+      border: 1px solid rgba(47, 66, 102, 0.4);
+      border-radius: 1.2rem;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.95rem;
+      color: #fff8ec;
+      font-family: inherit;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s;
+      resize: vertical;
+      min-height: 85px;
+      line-height: 1.5;
+    }
+    select {
+      min-height: auto;
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%232F4266" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+      cursor: pointer;
+    }
+    input {
+      min-height: auto;
+      resize: none;
+    }
+    textarea:focus, select:focus, input:focus {
+      outline: none;
+      border-color: #2F4266;
+      box-shadow: 0 0 22px rgba(47, 66, 102, 0.5);
+    }
+    .row-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    @media (max-width: 500px) {
+      .row-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .btn-row {
+      display: flex;
+      gap: 0.8rem;
+      margin: 1.4rem 0 1.6rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      flex: 1 1 auto;
+      padding: 0.8rem 1.4rem;
+      border-radius: 3rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid rgba(47, 66, 102, 0.4);
+      background: #1f2338;
+      color: #f7e7c4;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      backdrop-filter: blur(8px);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #2F4266, #1e2d4a);
+      color: #ffffff;
+      font-weight: 800;
+      border: 1px solid #4a6590;
+      box-shadow: 0 10px 22px -7px #2F4266;
+    }
+    .btn-primary:hover {
+      filter: brightness(1.2);
+      transform: scale(1.02);
+    }
+    .btn-outline-gold {
+      background: transparent;
+      border: 1.5px solid #D6B04A;
+      color: #D6B04A;
+      font-weight: 700;
+    }
+    .btn:hover {
+      background: #2c314b;
+      transform: translateY(-2px);
+    }
+    .result-panel {
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(18px);
+      border-radius: 1.5rem;
+      padding: 1.4rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(47, 66, 102, 0.35);
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: #c5d5f0;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .title-output {
+      font-size: 1.35rem;
+      font-weight: 750;
+      color: #e8dcc8;
+      line-height: 1.4;
+      word-break: break-word;
+      background: #ffffff08;
+      padding: 0.6rem 0.9rem;
+      border-radius: 1rem;
+      margin-bottom: 0.9rem;
+      border-left: 3px solid #2F4266;
+    }
+    .hashtag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+    .hashtag {
+      background: #1a2035;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #D6B04A;
+      border: 1px solid #3a4a6a;
+      letter-spacing: 0.2px;
+    }
+    .copy-btn {
+      background: transparent;
+      border: 1px solid rgba(47, 66, 102, 0.7);
+      color: #cddaf5;
+      padding: 0.25rem 0.9rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .copy-btn:hover {
+      background: rgba(47, 66, 102, 0.25);
+      border-color: #2F4266;
+    }
+    .caption-box {
+      background: #0f0f1f99;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      color: #d4c49a;
+      margin: 0.8rem 0;
+      border: 1px dashed rgba(47, 66, 102, 0.35);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .variant-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+    .variant-item {
+      background: #1a2035;
+      padding: 0.3rem 0.8rem;
+      border-radius: 1.5rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(47, 66, 102, 0.3);
+      transition: 0.2s;
+      color: #cddaf5;
+    }
+    .variant-item:hover {
+      background: rgba(47, 66, 102, 0.3);
+      border-color: #2F4266;
+      color: #ffffff;
+    }
+    hr {
+      border-color: #ffffff12;
+      margin: 1rem 0 0.4rem;
+    }
+    .tip-text {
+      font-size: 0.68rem;
+      color: #8b846a;
+      text-align: center;
+      margin-top: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<div class="main-card">
+
+  <!-- ============ LIGHT BEARERS INTERNATIONAL LOGO ============ -->
+  <div class="logo-container">
+    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="90" height="90">
+      <!-- Thick white outer ring -->
+      <circle cx="200" cy="200" r="180" fill="none" stroke="#FFFFFF" stroke-width="18"/>
+      <!-- Left semicircle: Golden Yellow -->
+      <path d="M200,20 A180,180 0 0,1 200,380 Z" fill="#D6B04A"/>
+      <!-- Right semicircle: Navy Blue -->
+      <path d="M200,20 A180,180 0 0,0 200,380 Z" fill="#2F4266"/>
+      <!-- Letter L: tall vertical pillar -->
+      <rect x="108" y="110" width="34" height="180" fill="#FFFFFF"/>
+      <!-- Letter L: wide bottom base -->
+      <rect x="108" y="256" width="67" height="34" fill="#FFFFFF"/>
+      <!-- Letter B: vertical stem attached to L -->
+      <rect x="194" y="110" width="32" height="180" fill="#FFFFFF"/>
+      <!-- B upper bowl: outer arc following circle contour -->
+      <path d="M226,110 C226,110 276,110 276,160 C276,200 250,200 226,200" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- B upper bowl: inner fill -->
+      <path d="M226,117 C258,117 269,128 269,160 C269,188 252,195 226,195 Z" fill="#FFFFFF"/>
+      <!-- B lower bowl: outer arc following circle contour -->
+      <path d="M226,210 C226,210 276,210 276,260 C276,300 256,290 226,290" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- B lower bowl: inner fill -->
+      <path d="M226,215 C255,215 269,226 269,258 C269,280 255,288 226,288 Z" fill="#FFFFFF"/>
+      <!-- Three-leaf green flame symbol: Left leaf (largest and tallest) -->
+      <path d="M178,215 C162,195 152,168 165,156 C178,144 190,160 196,180 C190,198 182,215 178,215 Z" fill="#8DAA3A"/>
+      <!-- Middle leaf (medium size) -->
+      <path d="M196,180 C196,160 196,132 210,122 C224,112 234,126 230,146 C226,166 212,188 196,210 C194,196 194,186 196,180 Z" fill="#8DAA3A"/>
+      <!-- Right leaf (smallest) -->
+      <path d="M214,210 C228,192 238,170 224,160 C210,150 202,164 198,180 C202,193 210,210 214,210 Z" fill="#8DAA3A"/>
+    </svg>
+  </div>
+
+  <h1>LIGHT BEARERS MEDIA</h1>
+  <div class="church-tag">🔥 Light Bearers International · Prophecy | Seer | Healing | Miracles</div>
+
+  <label for="miracleDesc">✍️ Describe the miracle / prophetic moment:</label>
+  <textarea id="miracleDesc" placeholder="e.g. Man deaf 20 years hears instantly, woman delivered from witchcraft during worship, prophetic word reveals hidden tumor and it vanishes..."></textarea>
+
+  <div class="row-grid">
+    <div>
+      <label for="platformSelect">📱 Target Platform</label>
+      <select id="platformSelect">
+        <option value="all">🔥 All Platforms (Balanced)</option>
+        <option value="tiktok">🎵 TikTok / Reels / Shorts</option>
+        <option value="youtube">▶️ YouTube Long Form</option>
+        <option value="instagram">📷 Instagram / Facebook</option>
+      </select>
+    </div>
+    <div>
+      <label for="toneSelect">🎯 Video Tone</label>
+      <select id="toneSelect">
+        <option value="powerful">⚡ Powerful & Intense</option>
+        <option value="emotional">😭 Emotional / Tear-jerking</option>
+        <option value="shocking">😱 Shocking / Unbelievable</option>
+        <option value="teaching">📖 Teaching / Testimony</option>
+        <option value="worship">🙌 Worship / Glory Atmosphere</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-primary" id="generateBtn">⚡ GENERATE VIRAL PACK</button>
+    <button class="btn btn-outline-gold" id="bulkBtn">🎲 5 TITLE VARIANTS</button>
+    <button class="btn" id="clearBtn">🔄 Clear</button>
+  </div>
+
+  <div id="resultBox" style="display: none;">
+    <div class="result-panel">
+      <div class="section-head">
+        <span>🏆 BEST VIRAL TITLE</span>
+        <button class="copy-btn" id="copyTitle">📋 Copy</button>
+      </div>
+      <div class="title-output" id="titleText"></div>
+
+      <div id="bulkContainer" style="display: none;">
+        <div class="section-head" style="margin-top: 0.8rem;">
+          <span>🎬 ALTERNATIVE TITLES (click to use)</span>
+        </div>
+        <div class="variant-list" id="variantList"></div>
+      </div>
+
+      <div class="section-head" style="margin-top: 1rem;">
+        <span>📝 VIRAL CAPTION (First Line)</span>
+        <button class="copy-btn" id="copyCaption">📋 Copy</button>
+      </div>
+      <div class="caption-box" id="captionText"></div>
+
+      <div class="section-head" style="margin-top: 0.6rem;">
+        <span>#️⃣ POWER HASHTAGS (12-15)</span>
+        <button class="copy-btn" id="copyHashtags">📋 Copy</button>
+      </div>
+      <div class="hashtag-group" id="hashtagContainer"></div>
+
+      <div class="section-head" style="margin-top: 0.8rem;">
+        <span>💬 ENGAGEMENT HOOK (CTA)</span>
+        <button class="copy-btn" id="copyCTA">📋 Copy</button>
+      </div>
+      <div class="caption-box" id="ctaText" style="font-style: italic;"></div>
+    </div>
+  </div>
+  <div class="tip-text">⚡ Light Bearers Media · Optimized for YouTube · TikTok · Instagram · Facebook · Shorts · Reels</div>
+</div>
+
+<script>
+  (() => {
+    const descInput = document.getElementById('miracleDesc');
+    const platformSelect = document.getElementById('platformSelect');
+    const toneSelect = document.getElementById('toneSelect');
+    const generateBtn = document.getElementById('generateBtn');
+    const bulkBtn = document.getElementById('bulkBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const resultBox = document.getElementById('resultBox');
+    const titleText = document.getElementById('titleText');
+    const hashtagContainer = document.getElementById('hashtagContainer');
+    const captionText = document.getElementById('captionText');
+    const ctaText = document.getElementById('ctaText');
+    const bulkContainer = document.getElementById('bulkContainer');
+    const variantList = document.getElementById('variantList');
+    const copyTitle = document.getElementById('copyTitle');
+    const copyHashtags = document.getElementById('copyHashtags');
+    const copyCaption = document.getElementById('copyCaption');
+    const copyCTA = document.getElementById('copyCTA');
+
+    let currentTitle = '', currentHashtags = [], currentCaption = '', currentCTA = '', allVariants = [];
+
+    function detectCategory(desc) {
+      const lower = desc.toLowerCase();
+      if (/\b(dead|death|raise|resurrect|life|casket|funeral|back to life)\b/i.test(lower)) return 'resurrection';
+      if (/\b(heal|healing|blind|deaf|cancer|sick|pain|wheelchair|crippled|tumor|disease)\b/i.test(lower) &&
+          /\b(deliver|demon|spirit|manifest|oppression|witchcraft)\b/i.test(lower)) return 'healing_deliverance';
+      if (/\b(heal|healing|blind|deaf|cancer|sick|pain|wheelchair|crippled|tumor)\b/i.test(lower)) return 'healing';
+      if (/\b(deliver|demon|spirit|manifest|oppression|witchcraft|bondage|set free)\b/i.test(lower)) return 'deliverance';
+      if (/\b(prophec|prophet|seer|vision|word of knowledge|reveal|hidden)\b/i.test(lower)) return 'prophecy';
+      if (/\b(miracle|signs|wonders|supernatural|glory|fire|amazing|unbelievable)\b/i.test(lower)) return 'miracle';
+      if (/\b(worship|praise|presence|anointing|glory cloud|altar)\b/i.test(lower)) return 'worship';
+      return 'general';
+    }
+
+    function getToneHooks(tone) {
+      const hooks = {
+        powerful: ['POWERFUL!', 'UNSTOPPABLE!', 'GLORY!', 'FIRE!', 'BREAKTHROUGH!'],
+        emotional: ['TEARS FLOWING!', 'SO TOUCHING!', 'CRYING!', 'HEART MELTING!', 'BROKE ME!'],
+        shocking: ['UNBELIEVABLE!', 'SHOCKING!', 'JAW DROPPING!', 'CAN\'T EXPLAIN!', 'WOW!'],
+        teaching: ['WATCH THIS!', 'LEARN THIS!', 'REVELATION!', 'DEEP WORD!', 'WISDOM!'],
+        worship: ['GLORY FILLED!', 'HEAVEN CAME DOWN!', 'ANGELIC!', 'HOLY!', 'PRESENCE!']
+      };
+      return hooks[tone] || hooks.powerful;
+    }
+
+    function getPlatformModifiers(platform) {
+      switch(platform) {
+        case 'tiktok': return { maxTitleLen: 80, maxHashtags: 12, suffix: ' 🎵', extraTags: ['#FYP', '#Viral', '#ForYou'] };
+        case 'youtube': return { maxTitleLen: 100, maxHashtags: 15, suffix: '', extraTags: ['#Jesus', '#Testimony', '#Christianity'] };
+        case 'instagram': return { maxTitleLen: 90, maxHashtags: 14, suffix: ' ✨', extraTags: ['#Explore', '#Reels', '#Faith'] };
+        default: return { maxTitleLen: 95, maxHashtags: 14, suffix: ' 🔥', extraTags: ['#ViralVideo', '#GodMove', '#LightBearersMedia'] };
+      }
+    }
+
+    function buildTitle(desc, platform, tone, variantSeed = 0) {
+      const category = detectCategory(desc);
+      const toneWords = getToneHooks(tone);
+      const plat = getPlatformModifiers(platform);
+      const shortDesc = desc.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/).slice(0, 5).join(' ');
+      const toneWord = toneWords[variantSeed % toneWords.length];
+
+      const templates = {
+        resurrection: [
+          `💀 RAISED FROM THE DEAD! ${shortDesc} – ${toneWord}`,
+          `DEAD MAN COMES BACK TO LIFE! ${toneWord} Jesus Did It!`,
+          `FROM DEATH TO LIFE! ${shortDesc} – ${toneWord} Must Watch`,
+          `RESURRECTION MIRACLE! ${shortDesc} – ${toneWord}`,
+          `THEY DIED AND CAME BACK! ${toneWord} Resurrection Glory`
+        ],
+        healing: [
+          `👁️ INSTANT HEALING! ${shortDesc} – ${toneWord}`,
+          `HEALED RIGHT NOW! ${shortDesc} – ${toneWord}`,
+          `DOCTORS CAN'T EXPLAIN! ${shortDesc} – ${toneWord}`,
+          `SICKNESS GONE! ${shortDesc} Jesus Healer – ${toneWord}`,
+          `${toneWord} HEALING BREAKS OUT! ${shortDesc}`
+        ],
+        deliverance: [
+          `⚡ DEMONS FLEE! ${shortDesc} – ${toneWord}`,
+          `DELIVERANCE POWER! ${shortDesc} – ${toneWord}`,
+          `SET FREE INSTANTLY! ${shortDesc} – ${toneWord}`,
+          `WITCHCRAFT DESTROYED! ${shortDesc} – ${toneWord}`,
+          `${toneWord} DELIVERANCE! ${shortDesc}`
+        ],
+        healing_deliverance: [
+          `🔥 HEALING & DELIVERANCE! ${shortDesc} – ${toneWord}`,
+          `DEMONS LEAVE, BODIES HEALED! ${shortDesc} – ${toneWord}`,
+          `DOUBLE MIRACLE! ${shortDesc} – ${toneWord}`,
+          `${toneWord} HEALED & DELIVERED! ${shortDesc}`,
+          `HEALING AND FREEDOM! ${shortDesc} – ${toneWord}`
+        ],
+        prophecy: [
+          `🔮 PROPHECY REVEALED! ${shortDesc} – ${toneWord}`,
+          `GOD SHOWED SECRETS! ${shortDesc} – ${toneWord}`,
+          `PROPHETIC WORD! ${shortDesc} – ${toneWord}`,
+          `SEER ANOINTING! ${shortDesc} – ${toneWord}`,
+          `${toneWord} PROPHECY FULFILLED! ${shortDesc}`
+        ],
+        miracle: [
+          `🌟 CRAZY MIRACLE! ${shortDesc} – ${toneWord}`,
+          `UNBELIEVABLE SIGN! ${shortDesc} – ${toneWord}`,
+          `GOD DID THE IMPOSSIBLE! ${shortDesc} – ${toneWord}`,
+          `${toneWord} MIRACLE MOMENT! ${shortDesc}`,
+          `SIGNS & WONDERS! ${shortDesc} – ${toneWord}`
+        ],
+        worship: [
+          `🙌 GLORY FILLED THE ROOM! ${shortDesc} – ${toneWord}`,
+          `HEAVEN INVADED! ${shortDesc} – ${toneWord}`,
+          `WORSHIP BREAKTHROUGH! ${shortDesc} – ${toneWord}`,
+          `${toneWord} PRESENCE OF GOD! ${shortDesc}`,
+          `ANGELS IN THE ROOM! ${shortDesc} – ${toneWord}`
+        ],
+        general: [
+          `🙏 GOD MOVED! ${shortDesc} – ${toneWord}`,
+          `MUST WATCH! ${shortDesc} – ${toneWord}`,
+          `${toneWord} ${shortDesc} – Jesus Is Real!`,
+          `POWER OF GOD! ${shortDesc} – ${toneWord}`,
+          `${toneWord} KINGDOM MOMENT! ${shortDesc}`
+        ]
+      };
+
+      const catTemplates = templates[category] || templates.general;
+      let title = catTemplates[variantSeed % catTemplates.length];
+      title = title.replace(/\b\w+/g, w => w.length <= 2 ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+      if (title.length > plat.maxTitleLen) title = title.slice(0, plat.maxTitleLen - 3) + '...';
+      return title + plat.suffix;
+    }
+
+    function buildCaption(desc, tone) {
+      const toneIntros = {
+        powerful: 'WATCH THIS! The power of God moved mightily:',
+        emotional: 'This will make you cry... 😭',
+        shocking: 'You won\'t believe what just happened:',
+        teaching: 'A powerful testimony you must hear:',
+        worship: 'The glory of God filled the place:'
+      };
+      return `${toneIntros[tone] || 'God moved powerfully:'} ${desc}\n\n🙏 Like, Share & Comment "JESUS" if you believe!\n🔔 Follow @LightBearersMedia for more kingdom content`;
+    }
+
+    function buildCTA(tone) {
+      const ctas = {
+        powerful: '💬 Comment "POWER" if you felt that! 👇',
+        emotional: '😭 Drop a ❤️ if this touched you!',
+        shocking: '😱 Type "WOW" in the comments!',
+        teaching: '📖 Save this & share with someone who needs it!',
+        worship: '🙌 Type "GLORY" if you love His presence!'
+      };
+      return ctas[tone] || '💬 Comment below & share this testimony! 👇';
+    }
+
+    function buildHashtags(desc, platform) {
+      const plat = getPlatformModifiers(platform);
+      const lower = desc.toLowerCase();
+      const base = ['#JesusHeals', '#Miracle', '#PowerOfGod', '#HolySpirit', '#Supernatural', '#Faith', '#GodIsGood', '#LightBearersMedia'];
+      const dynamic = [];
+      if (/\bheal|blind|deaf|cancer|sick|pain|wheelchair\b/i.test(lower)) dynamic.push('#HealingMiracle', '#InstantHealing');
+      if (/\bdeliver|demon|spirit|witchcraft|bondage\b/i.test(lower)) dynamic.push('#Deliverance', '#SetFree');
+      if (/\bprophec|seer|vision|reveal\b/i.test(lower)) dynamic.push('#Prophecy', '#SeerAnointing');
+      if (/\bmiracle|signs|wonders|supernatural\b/i.test(lower)) dynamic.push('#SignsAndWonders', '#GloryOfGod');
+      if (/\bdead|raise|resurrect\b/i.test(lower)) dynamic.push('#ResurrectionPower', '#JesusWins');
+      if (/\bworship|praise|presence\b/i.test(lower)) dynamic.push('#WorshipEncounter', '#PresenceOfGod');
+      let combined = [...base, ...dynamic, ...plat.extraTags];
+      const uniq = [...new Set(combined.map(t => t.toLowerCase()))].map((t, i) => combined.find(c => c.toLowerCase() === t));
+      return uniq.slice(0, plat.maxHashtags);
+    }
+
+    function render(showBulk = false) {
+      const desc = descInput.value.trim();
+      if (!desc) { resultBox.style.display = 'none'; return; }
+      const platform = platformSelect.value;
+      const tone = toneSelect.value;
+
+      currentTitle = buildTitle(desc, platform, tone, 0);
+      currentHashtags = buildHashtags(desc, platform);
+      currentCaption = buildCaption(desc, tone);
+      currentCTA = buildCTA(tone);
+
+      titleText.textContent = currentTitle;
+      captionText.textContent = currentCaption;
+      ctaText.textContent = currentCTA;
+      hashtagContainer.innerHTML = '';
+      currentHashtags.forEach(t => {
+        const s = document.createElement('span');
+        s.className = 'hashtag';
+        s.textContent = t;
+        hashtagContainer.appendChild(s);
+      });
+
+      if (showBulk) {
+        allVariants = [];
+        for (let i = 1; i <= 5; i++) {
+          allVariants.push(buildTitle(desc, platform, tone, i));
+        }
+        variantList.innerHTML = '';
+        allVariants.forEach((v, idx) => {
+          const span = document.createElement('span');
+          span.className = 'variant-item';
+          span.textContent = v;
+          span.title = 'Click to use this title';
+          span.addEventListener('click', () => {
+            currentTitle = v;
+            titleText.textContent = v;
+          });
+          variantList.appendChild(span);
+        });
+        bulkContainer.style.display = 'block';
+      } else {
+        bulkContainer.style.display = 'none';
+      }
+
+      resultBox.style.display = 'block';
+    }
+
+    generateBtn.addEventListener('click', () => render(false));
+    bulkBtn.addEventListener('click', () => render(true));
+    clearBtn.addEventListener('click', () => {
+      descInput.value = '';
+      resultBox.style.display = 'none';
+      currentTitle = ''; currentHashtags = []; allVariants = [];
+    });
+
+    async function copyToClipboard(text, btn) {
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => { btn.textContent = '📋 Copy'; }, 1500);
+      } catch { alert('Copy manually'); }
+    }
+    copyTitle.addEventListener('click', () => copyToClipboard(currentTitle, copyTitle));
+    copyHashtags.addEventListener('click', () => copyToClipboard(currentHashtags.join(' '), copyHashtags));
+    copyCaption.addEventListener('click', () => copyToClipboard(currentCaption, copyCaption));
+    copyCTA.addEventListener('click', () => copyToClipboard(currentCTA, copyCTA));
+
+  })();
+</script>
+</body>
+</html>
