@@ -28,6 +28,7 @@
     .btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold-bright);font-weight:700}
     .btn-sm{padding:0.25rem 0.6rem;font-size:0.65rem;flex:0 1 auto}
     .btn-copy-big{padding:0.6rem 1.5rem;font-size:0.85rem;font-weight:800;background:var(--success);color:#FFF;border:none;border-radius:3rem;cursor:pointer;transition:0.25s;font-family:inherit;letter-spacing:0.3px;box-shadow:0 4px 14px rgba(92,184,120,0.3)}.btn-copy-big:hover{filter:brightness(1.2);transform:translateY(-2px)}
+    .btn-copy-section{padding:0.3rem 0.7rem;font-size:0.62rem;font-weight:700;background:rgba(255,255,255,0.08);color:#D5CFBA;border:1px solid rgba(255,255,255,0.2);border-radius:2rem;cursor:pointer;transition:0.2s;font-family:inherit;white-space:nowrap}.btn-copy-section:hover{background:rgba(214,176,74,0.2);border-color:var(--gold);color:#FFF}
     .result-panel{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px);border-radius:1rem;padding:0.9rem;margin-top:0.5rem;border:1px solid rgba(255,255,255,0.1)}
     .section-head{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:#D5CFBA;margin-bottom:0.25rem;flex-wrap:wrap;gap:0.25rem;font-size:0.78rem}
     .title-output{font-size:1.1rem;font-weight:750;color:#FFF;line-height:1.35;word-break:break-word;background:rgba(255,255,255,0.04);padding:0.45rem 0.7rem;border-radius:0.75rem;margin-bottom:0.4rem;border-left:3px solid var(--gold)}
@@ -36,32 +37,29 @@
     .hashtag{background:rgba(255,255,255,0.06);padding:0.2rem 0.6rem;border-radius:2rem;font-size:0.7rem;font-weight:600;color:#F5D78C;border:1px solid rgba(255,255,255,0.12)}
     .copy-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.25);color:#D5CFBA;padding:0.2rem 0.6rem;border-radius:2rem;font-size:0.65rem;font-weight:700;cursor:pointer;transition:0.2s;font-family:inherit}.copy-btn:hover{background:rgba(214,176,74,0.2);border-color:var(--gold);color:#FFF}
     .caption-box{background:rgba(255,255,255,0.03);border-radius:0.75rem;padding:0.55rem;font-size:0.78rem;color:#D5CFBA;margin:0.35rem 0;border:1px solid rgba(255,255,255,0.08);white-space:pre-wrap;word-break:break-word;line-height:1.45}
+    .corrected-box{background:rgba(92,184,120,0.1);border:1px solid rgba(92,184,120,0.35);border-radius:0.85rem;padding:0.6rem 0.8rem;font-size:0.8rem;color:#C5E8D0;margin:0.35rem 0;display:none;line-height:1.5}
+    .corrected-box .corr-label{color:#5CB878;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.2rem;display:block}
+    .corrected-box .corr-original{color:#E05555;text-decoration:line-through;font-size:0.72rem;display:block;margin-bottom:0.15rem}
+    .corrected-box .corr-fixed{color:#FFF;font-weight:600;font-size:0.82rem;display:block}
     .variant-list{display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.2rem}.variant-item{background:rgba(255,255,255,0.04);padding:0.2rem 0.55rem;border-radius:1.5rem;font-size:0.7rem;cursor:pointer;border:1px solid rgba(255,255,255,0.12);color:#C5BFA8;font-weight:500}.variant-item:hover{background:rgba(214,176,74,0.2);border-color:var(--gold);color:#FFF}
     .tip-text{font-size:0.62rem;color:#6B6B78;text-align:center;margin-top:0.5rem}
     .time-card{background:var(--navy);border-radius:1.2rem;padding:1rem;text-align:center;margin:0.4rem 0;box-shadow:0 8px 25px rgba(47,66,102,0.4)}.time-big{font-size:1.8rem;font-weight:900;color:#F5D78C}.time-sub{font-size:0.75rem;color:#C5D5F0;margin-top:0.3rem}.time-live{font-size:0.65rem;color:#8DAA3A;margin-top:0.2rem}
+    .timing-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.5rem}
+    .timing-box{background:rgba(255,255,255,0.03);border-radius:1rem;padding:0.7rem;text-align:center;border:1px solid rgba(255,255,255,0.08)}.timing-box h4{color:#F5D78C;font-size:0.7rem;margin-bottom:0.3rem}.timing-box .time-val{font-size:1.1rem;font-weight:800;color:#FFF}.timing-box .time-tag{font-size:0.6rem;color:#8A8A9A;margin-top:0.2rem}
     .pack-container{background:#0d1117;border:1px solid rgba(214,176,74,0.3);border-radius:1.2rem;overflow:hidden;margin:0.6rem 0}
-    .pack-header{background:linear-gradient(135deg,#2F4266,#1a2d4a);padding:0.8rem 1rem;text-align:center;border-bottom:1px solid rgba(214,176,74,0.3)}
-    .pack-header h3{color:#F5D78C;font-size:0.95rem;font-weight:800;margin:0}.pack-header span{color:#C5D5F0;font-size:0.65rem}
+    .pack-header{background:linear-gradient(135deg,#2F4266,#1a2d4a);padding:0.8rem 1rem;text-align:center;border-bottom:1px solid rgba(214,176,74,0.3)}.pack-header h3{color:#F5D78C;font-size:0.95rem;font-weight:800;margin:0}.pack-header span{color:#C5D5F0;font-size:0.65rem}
     .pack-body{padding:0.8rem 1rem}
-    .pack-item{background:rgba(255,255,255,0.03);border-radius:0.8rem;padding:0.7rem 0.9rem;margin-bottom:0.6rem;border-left:3px solid var(--gold)}
-    .pack-item.hook-item{border-left-color:var(--danger)}
-    .pack-item.caption-item{border-left-color:#5CB878}
-    .pack-item.hashtags-item{border-left-color:#8DAA3A}
-    .pack-item.cta-item{border-left-color:#F5D78C}
-    .pack-item.pinned-item{border-left-color:#E05555}
-    .pack-item-label{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.3rem;display:flex;align-items:center;gap:0.3rem}
-    .pack-item-label.gold{color:#F5D78C}.pack-item-label.red{color:#E05555}.pack-item-label.green{color:#5CB878}.pack-item-label.lime{color:#8DAA3A}
-    .pack-item-content{font-size:0.82rem;color:#E8E4D5;line-height:1.5;word-break:break-word;white-space:pre-wrap}
-    .pack-item-content.title-content{font-size:0.95rem;font-weight:700;color:#FFF}
-    .pack-item-content.hook-content{font-size:0.85rem;font-weight:700;color:#FFE4A8;text-transform:uppercase}
-    .pack-footer{background:rgba(0,0,0,0.3);padding:0.7rem 1rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06)}
-    .pack-footer span{color:#6B6B78;font-size:0.6rem}
+    .pack-item{background:rgba(255,255,255,0.03);border-radius:0.8rem;padding:0.7rem 0.9rem;margin-bottom:0.6rem;border-left:3px solid var(--gold)}.pack-item.hook-item{border-left-color:var(--danger)}.pack-item.caption-item{border-left-color:#5CB878}.pack-item.hashtags-item{border-left-color:#8DAA3A}.pack-item.cta-item{border-left-color:#F5D78C}.pack-item.pinned-item{border-left-color:#E05555}
+    .pack-item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;flex-wrap:wrap;gap:0.3rem}
+    .pack-item-label{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px}.pack-item-label.gold{color:#F5D78C}.pack-item-label.red{color:#E05555}.pack-item-label.green{color:#5CB878}.pack-item-label.lime{color:#8DAA3A}
+    .pack-item-content{font-size:0.82rem;color:#E8E4D5;line-height:1.5;word-break:break-word;white-space:pre-wrap}.pack-item-content.title-content{font-size:0.95rem;font-weight:700;color:#FFF}.pack-item-content.hook-content{font-size:0.85rem;font-weight:700;color:#FFE4A8;text-transform:uppercase}
+    .pack-footer{background:rgba(0,0,0,0.3);padding:0.7rem 1rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06)}.pack-footer span{color:#6B6B78;font-size:0.6rem}
     .lang-flags{display:flex;flex-wrap:wrap;gap:0.25rem;margin:0.4rem 0}.lang-flag-btn{padding:0.35rem 0.6rem;border-radius:1.5rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:#C5BFA8;cursor:pointer;font-weight:600;font-size:0.68rem;transition:0.2s;font-family:inherit;white-space:nowrap}.lang-flag-btn.active-lang{background:var(--navy);border-color:var(--gold);color:#F5D78C;box-shadow:0 0 10px rgba(214,176,74,0.3)}.lang-flag-btn:hover{background:rgba(214,176,74,0.15);border-color:var(--gold);color:#F5D78C}
     .translate-block{background:rgba(255,255,255,0.02);border-radius:0.7rem;padding:0.55rem;margin-bottom:0.4rem;border:1px solid rgba(255,255,255,0.06)}.translate-block h4{color:#F5D78C;font-size:0.7rem;margin-bottom:0.2rem;display:flex;align-items:center;justify-content:space-between}
     .translated-text{font-size:0.85rem;color:#FFF;background:rgba(0,0,0,0.3);padding:0.5rem 0.7rem;border-radius:0.6rem;word-break:break-word;line-height:1.45;border-left:3px solid var(--success)}
     .info-note{font-size:0.62rem;color:#6B6B78;text-align:center;margin-top:0.3rem}
     .version-badge{display:inline-block;background:rgba(214,176,74,0.2);color:#F5D78C;padding:0.1rem 0.5rem;border-radius:1rem;font-size:0.6rem;font-weight:700;margin-left:0.3rem}
-    @media(max-width:500px){.main-card{padding:1rem 0.8rem;border-radius:1.3rem}.row-grid{grid-template-columns:1fr}h1{font-size:1.3rem}.logo-svg{width:50px;height:50px}.tab-btn{font-size:0.62rem;padding:0.4rem}.btn{font-size:0.75rem;padding:0.5rem 0.8rem}.title-output{font-size:1rem}.hook-output{font-size:0.82rem}textarea,select{font-size:0.8rem;padding:0.5rem 0.7rem}label{font-size:0.75rem}.time-big{font-size:1.4rem}.pack-item-content.title-content{font-size:0.85rem}.pack-item-content{font-size:0.75rem}}
+    @media(max-width:500px){.main-card{padding:1rem 0.8rem;border-radius:1.3rem}.row-grid,.timing-grid{grid-template-columns:1fr}h1{font-size:1.3rem}.logo-svg{width:50px;height:50px}.tab-btn{font-size:0.62rem;padding:0.4rem}.btn{font-size:0.75rem;padding:0.5rem 0.8rem}.title-output{font-size:1rem}.hook-output{font-size:0.82rem}textarea,select{font-size:0.8rem;padding:0.5rem 0.7rem}label{font-size:0.75rem}.time-big{font-size:1.4rem}.pack-item-content.title-content{font-size:0.85rem}.pack-item-content{font-size:0.75rem}}
   </style>
 </head>
 <body>
@@ -80,8 +78,13 @@
 
   <!-- TAB 1: GENERATE -->
   <div class="tab-panel active" id="tab-generate">
-    <label for="miracleDesc">✍️ Describe exactly what happened in the video:</label>
-    <textarea id="miracleDesc" placeholder="e.g. Woman with stage 4 cancer healed instantly during prayer line, man deaf 20 years hears during worship, demon manifest and cast out..."></textarea>
+    <label for="miracleDesc">✍️ Describe what happened (type freely — we will correct any errors):</label>
+    <textarea id="miracleDesc" placeholder="e.g. Woman with stage 4 cancer healed instantly during prayer line, boy of 12 years delivered from demon..."></textarea>
+    <div class="corrected-box" id="correctedBox">
+      <span class="corr-label">✅ AUTO-CORRECTED TO PERFECT ENGLISH</span>
+      <span class="corr-original" id="corrOriginal"></span>
+      <span class="corr-fixed" id="corrFixed"></span>
+    </div>
     <div class="row-grid">
       <div><label for="platformSelect">📱 Platform</label><select id="platformSelect"><option value="all">🔥 All Platforms</option><option value="tiktok">🎵 TikTok / Reels / Shorts</option><option value="youtube">▶️ YouTube</option><option value="instagram">📷 Instagram / Facebook</option></select></div>
       <div><label for="toneSelect">🎯 Video Tone</label><select id="toneSelect"><option value="powerful">⚡ Powerful & Intense</option><option value="emotional">😭 Emotional / Tear-Jerking</option><option value="shocking">😱 Shocking / Unbelievable</option><option value="teaching">📖 Teaching / Testimony</option><option value="worship">🙌 Worship / Glory</option></select></div>
@@ -92,8 +95,8 @@
     </div>
     <div id="resultBox" style="display:none"><div class="result-panel">
       <div class="section-head"><span>🏆 VIRAL TITLE</span><span class="version-badge" id="versionBadge"></span><button class="copy-btn" id="copyTitle">📋 Copy</button></div><div class="title-output" id="titleText"></div>
-      <div class="section-head"><span>🔴 FIRST 3 SECONDS HOOK (Text Overlay)</span><button class="copy-btn" id="copyHook">📋 Copy</button></div><div class="hook-output" id="hookText"></div>
-      <div id="bulkContainer" style="display:none"><div class="section-head" style="margin-top:0.4rem"><span>🎬 Alternative Titles (tap to use)</span></div><div class="variant-list" id="variantList"></div></div>
+      <div class="section-head"><span>🔴 FIRST 3 SECONDS HOOK</span><button class="copy-btn" id="copyHook">📋 Copy</button></div><div class="hook-output" id="hookText"></div>
+      <div id="bulkContainer" style="display:none"><div class="section-head" style="margin-top:0.4rem"><span>🎬 Alternative Titles</span></div><div class="variant-list" id="variantList"></div></div>
       <div class="section-head" style="margin-top:0.6rem"><span>📝 VIRAL CAPTION</span><button class="copy-btn" id="copyCaption">📋 Copy</button></div><div class="caption-box" id="captionText"></div>
       <div class="section-head"><span>#️⃣ HASHTAGS</span><button class="copy-btn" id="copyHashtags">📋 Copy</button></div><div class="hashtag-group" id="hashtagContainer"></div>
       <div class="section-head"><span>💬 ENGAGEMENT CTA</span><button class="copy-btn" id="copyCTA">📋 Copy</button></div><div class="caption-box" id="ctaText" style="font-style:italic"></div>
@@ -101,73 +104,37 @@
     </div></div>
   </div>
 
-  <!-- TAB 2: CONTENT PACK (REDESIGNED - RICH & CLEAR) -->
+  <!-- TAB 2: CONTENT PACK -->
   <div class="tab-panel" id="tab-pack">
-    <label for="packDesc">✍️ Describe the miracle / moment in the video:</label>
-    <textarea id="packDesc" placeholder="e.g. Woman with stage 4 cancer healed instantly during prayer line at Light Bearers church service..."></textarea>
+    <label for="packDesc">✍️ Describe the miracle (type freely — we will correct any errors):</label>
+    <textarea id="packDesc" placeholder="e.g. Woman with stage 4 cancer healed instantly during prayer line..."></textarea>
+    <div class="corrected-box" id="correctedBoxPack">
+      <span class="corr-label">✅ AUTO-CORRECTED TO PERFECT ENGLISH</span>
+      <span class="corr-original" id="corrOriginalPack"></span>
+      <span class="corr-fixed" id="corrFixedPack"></span>
+    </div>
     <div class="row-grid">
-      <div><label for="packPlatform">📱 Target Platform</label><select id="packPlatform"><option value="all">🔥 All Platforms (Balanced)</option><option value="tiktok">🎵 TikTok / Reels / Shorts</option><option value="youtube">▶️ YouTube (Long Form)</option><option value="instagram">📷 Instagram / Facebook</option></select></div>
-      <div><label for="packTone">🎯 Video Mood</label><select id="packTone"><option value="powerful">⚡ Powerful & Intense</option><option value="emotional">😭 Emotional / Heart-Touching</option><option value="shocking">😱 Shocking / Jaw-Dropping</option><option value="teaching">📖 Teaching / Testimony</option><option value="worship">🙌 Worship / Glory Atmosphere</option></select></div>
+      <div><label for="packPlatform">📱 Target Platform</label><select id="packPlatform"><option value="all">🔥 All Platforms</option><option value="tiktok">🎵 TikTok / Reels</option><option value="youtube">▶️ YouTube</option><option value="instagram">📷 Instagram / Facebook</option></select></div>
+      <div><label for="packTone">🎯 Video Mood</label><select id="packTone"><option value="powerful">⚡ Powerful</option><option value="emotional">😭 Emotional</option><option value="shocking">😱 Shocking</option><option value="teaching">📖 Teaching</option><option value="worship">🙌 Worship</option></select></div>
     </div>
     <button class="btn btn-gold" id="packBtn" style="width:100%;margin-top:0.2rem">📋 GENERATE COMPLETE CONTENT PACK</button>
-    <div class="info-note">This generates everything your media team needs to post — all in one place</div>
-
-    <div id="packResult" style="display:none;margin-top:0.5rem">
-      <div class="pack-container">
-        <div class="pack-header">
-          <h3>📦 LBM COMPLETE CONTENT PACK</h3>
-          <span>Light Bearers Media · Ready to Post · Copy & Paste</span>
-        </div>
-        <div class="pack-body">
-
-          <div class="pack-item">
-            <div class="pack-item-label gold">🏆 TITLE <span style="font-weight:400;font-size:0.55rem">(Copy & paste as your video title)</span></div>
-            <div class="pack-item-content title-content" id="packTitle"></div>
-          </div>
-
-          <div class="pack-item hook-item">
-            <div class="pack-item-label red">🔴 TEXT OVERLAY — FIRST 3 SECONDS <span style="font-weight:400;font-size:0.55rem">(Put this text on screen at the start)</span></div>
-            <div class="pack-item-content hook-content" id="packHook"></div>
-          </div>
-
-          <div class="pack-item caption-item">
-            <div class="pack-item-label green">📝 VIDEO CAPTION / DESCRIPTION <span style="font-weight:400;font-size:0.55rem">(Paste in the caption/description field)</span></div>
-            <div class="pack-item-content" id="packCaption"></div>
-          </div>
-
-          <div class="pack-item hashtags-item">
-            <div class="pack-item-label lime">#️⃣ HASHTAGS <span style="font-weight:400;font-size:0.55rem">(Copy all and paste at the end of your caption)</span></div>
-            <div class="hashtag-group" id="packHashtagsGroup" style="margin-bottom:0.3rem"></div>
-            <div class="pack-item-content" id="packHashtagsText" style="font-size:0.72rem"></div>
-          </div>
-
-          <div class="pack-item cta-item">
-            <div class="pack-item-label gold">💬 ENGAGEMENT CALL-TO-ACTION <span style="font-weight:400;font-size:0.55rem">(Put this at the very end of your caption)</span></div>
-            <div class="pack-item-content" id="packCTA" style="font-style:italic"></div>
-          </div>
-
-          <div class="pack-item pinned-item">
-            <div class="pack-item-label red">📌 PINNED COMMENT <span style="font-weight:400;font-size:0.55rem">(Pin this as the first comment on your video)</span></div>
-            <div class="pack-item-content" id="packReply" style="font-style:italic"></div>
-          </div>
-
-        </div>
-        <div class="pack-footer">
-          <button class="btn-copy-big" id="copyFullPack">📋 COPY ENTIRE PACK TO CLIPBOARD</button>
-          <div style="margin-top:0.3rem"><span>📱 TikTok · YouTube · Instagram · Facebook &nbsp;|&nbsp; ⚡ @LightBearersMedia &nbsp;|&nbsp; 🌍 Light Bearers International</span></div>
-        </div>
-      </div>
-    </div>
+    <div id="packResult" style="display:none;margin-top:0.5rem"><div class="pack-container"><div class="pack-header"><h3>📦 LBM COMPLETE CONTENT PACK</h3><span>Light Bearers Media · Ready to Post</span></div><div class="pack-body">
+      <div class="pack-item"><div class="pack-item-header"><span class="pack-item-label gold">🏆 TITLE</span><button class="btn-copy-section" id="copyPackTitle">📋 Copy</button></div><div class="pack-item-content title-content" id="packTitle"></div></div>
+      <div class="pack-item hook-item"><div class="pack-item-header"><span class="pack-item-label red">🔴 HOOK — First 3 Sec</span><button class="btn-copy-section" id="copyPackHook">📋 Copy</button></div><div class="pack-item-content hook-content" id="packHook"></div></div>
+      <div class="pack-item caption-item"><div class="pack-item-header"><span class="pack-item-label green">📝 CAPTION</span><button class="btn-copy-section" id="copyPackCaption">📋 Copy</button></div><div class="pack-item-content" id="packCaption"></div></div>
+      <div class="pack-item hashtags-item"><div class="pack-item-header"><span class="pack-item-label lime">#️⃣ HASHTAGS</span><button class="btn-copy-section" id="copyPackHashtags">📋 Copy</button></div><div class="hashtag-group" id="packHashtagsGroup" style="margin-bottom:0.3rem"></div><div class="pack-item-content" id="packHashtagsText" style="font-size:0.72rem"></div></div>
+      <div class="pack-item cta-item"><div class="pack-item-header"><span class="pack-item-label gold">💬 CTA</span><button class="btn-copy-section" id="copyPackCTA">📋 Copy</button></div><div class="pack-item-content" id="packCTA" style="font-style:italic"></div></div>
+      <div class="pack-item pinned-item"><div class="pack-item-header"><span class="pack-item-label red">📌 PINNED COMMENT</span><button class="btn-copy-section" id="copyPackReply">📋 Copy</button></div><div class="pack-item-content" id="packReply" style="font-style:italic"></div></div>
+    </div><div class="pack-footer"><button class="btn-copy-big" id="copyFullPack">📋 COPY ENTIRE PACK</button><div style="margin-top:0.3rem"><span>📱 TikTok · YouTube · Instagram · Facebook | ⚡ @LightBearersMedia | 🌍 Light Bearers International</span></div></div></div></div>
   </div>
 
   <!-- TAB 3: TRANSLATE -->
   <div class="tab-panel" id="tab-translate">
-    <label>🌍 First generate content in Tab 1, then translate it here:</label>
-    <div style="margin-top:0.5rem"><label>Select Target Language:</label><div class="lang-flags" id="transLangButtons">
+    <label>🌍 First generate content in Tab 1, then translate:</label>
+    <div style="margin-top:0.5rem"><label>Select Language:</label><div class="lang-flags" id="transLangButtons">
       <button class="lang-flag-btn active-lang" data-lang="fr">🇫🇷 French</button><button class="lang-flag-btn" data-lang="es">🇪🇸 Spanish</button><button class="lang-flag-btn" data-lang="pt">🇧🇷 Portuguese</button><button class="lang-flag-btn" data-lang="de">🇩🇪 German</button><button class="lang-flag-btn" data-lang="ru">🇷🇺 Russian</button><button class="lang-flag-btn" data-lang="ha">🇳🇬 Hausa</button><button class="lang-flag-btn" data-lang="ig">🇳🇬 Igbo</button><button class="lang-flag-btn" data-lang="yo">🇳🇬 Yoruba</button>
     </div></div>
     <button class="btn btn-gold" id="translateBtn" style="width:100%;margin-top:0.5rem">🌍 TRANSLATE ALL CONTENT</button>
-    <div class="info-note">Every word translated — all 8 languages with complete hook coverage.</div>
     <div id="translateResult" style="display:none;margin-top:0.5rem"><div class="result-panel">
       <div class="translate-block" id="transTitleBlock"><h4>🏆 TRANSLATED TITLE <button class="copy-btn btn-sm" id="copyTransTitle">📋 Copy</button></h4><div class="translated-text" id="transTitle"></div></div>
       <div class="translate-block" id="transHookBlock"><h4>🔴 TRANSLATED HOOK <button class="copy-btn btn-sm" id="copyTransHook">📋 Copy</button></h4><div class="translated-text" id="transHook" style="text-transform:uppercase"></div></div>
@@ -181,8 +148,8 @@
   <div class="tab-panel" id="tab-timing">
     <div class="time-card"><div class="time-big" id="liveTimeDisplay">--:-- --</div><div class="time-sub" id="liveDateDisplay">Loading...</div><div class="time-live" id="liveZoneDisplay">🕐 Detecting your timezone...</div></div>
     <label for="timingPlatform">📱 Select Platform:</label><select id="timingPlatform"><option value="tiktok">TikTok / Reels / Shorts</option><option value="youtube">YouTube</option><option value="instagram">Instagram / Facebook</option></select>
-    <button class="btn btn-primary" id="timingBtn" style="margin-top:0.5rem;width:100%">⏰ CALCULATE BEST POSTING TIME</button>
-    <div id="timingResult" style="display:none;margin-top:0.5rem"><div class="result-panel" style="text-align:center"><div style="font-size:0.75rem;color:#C5BFA8;margin-bottom:0.2rem">🔥 YOUR NEXT BEST POSTING WINDOW</div><div class="time-big" id="bestTime" style="color:#F5D78C"></div><div style="font-size:0.7rem;color:#8A8A9A;margin-top:0.3rem" id="timingReason"></div><div style="margin-top:0.4rem;font-size:0.72rem;color:#F5D78C">📌 Alternative: <span id="secondBest" style="font-weight:700"></span></div><div style="margin-top:0.3rem;font-size:0.65rem;color:#6B6B78" id="timingCountdown"></div></div></div>
+    <button class="btn btn-primary" id="timingBtn" style="margin-top:0.5rem;width:100%">⏰ CALCULATE BEST POSTING TIMES</button>
+    <div id="timingResult" style="display:none;margin-top:0.5rem"><div class="result-panel"><div style="text-align:center;margin-bottom:0.6rem"><span style="font-size:0.75rem;color:#C5BFA8">🔥 BEST POSTING WINDOWS</span></div><div class="timing-grid"><div class="timing-box" style="border-left:3px solid #F5D78C"><h4>🌅 MORNING</h4><div class="time-val" id="morningWindow">--</div><div class="time-tag" id="morningTag">AM</div></div><div class="timing-box" style="border-left:3px solid #E05555"><h4>🌆 EVENING</h4><div class="time-val" id="eveningWindow">--</div><div class="time-tag" id="eveningTag">PM</div></div></div><div style="text-align:center;margin-top:0.5rem"><div style="font-size:0.7rem;color:#8A8A9A" id="timingReason"></div><div style="margin-top:0.4rem;font-size:0.75rem;color:#5CB878;font-weight:700" id="timingRecommendation"></div><div style="margin-top:0.3rem;font-size:0.65rem;color:#6B6B78" id="timingCountdown"></div></div></div></div>
   </div>
   <div class="tip-text">⚡ Light Bearers Media · Built for the LBI Media Team · From Nigeria to the Nations</div>
 </div>
@@ -200,120 +167,212 @@
   }
   updateClock();setInterval(updateClock,30000);
 
-  // ==================== TAB SWITCHING ====================
-  document.querySelectorAll('.tab-btn').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.tab-btn').forEach(function(x){x.classList.remove('active')});
-      document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
-      b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tab-btn').forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');});});
+
+  // ==================== SMART ENGLISH CORRECTION ENGINE ====================
+  function correctEnglish(text){
+    if(!text||!text.trim())return text;
+    var t=text.trim();
+
+    // STEP 1: Fix pronoun/article errors at start
+    t=t.replace(/^I\s+(boy|girl|man|woman|child|lady|gentleman|person|pastor|prophet)\b/i,'A $1');
+    t=t.replace(/^I\s+(was|am|have|got|seen|witnessed)\b/i,'I $1');
+    t=t.replace(/^Me\s+(boy|girl|man|woman|child)\b/i,'A $1');
+    t=t.replace(/^My\s+(boy|girl|son|daughter|child)\b/i,'My $1');
+    t=t.replace(/^The\s+(boy|girl|man|woman|child|person)\b/i,'A $1');
+
+    // STEP 2: Fix "of X years" -> "aged X" or "X years old"
+    t=t.replace(/\b(boy|girl|man|woman|child|son|daughter|lady|gentleman|person|pastor|prophet)\s+of\s+(\d+)\s*(years?)?\b/gi,'$1 aged $2');
+    t=t.replace(/\baged\s+(\d+)\s+(year|years)\b/gi,'aged $1');
+    t=t.replace(/\b(\d+)\s+years?\s+(old\s+)?(boy|girl|man|woman|child|son|daughter)\b/gi,'$3 aged $1');
+
+    // STEP 3: Fix verb tense errors
+    t=t.replace(/\b(was|is|were|are|has been|have been)\s+(struck|strike|striken)\b/gi,'$1 stricken');
+    t=t.replace(/\bstruck by\b/gi,'stricken by');
+    t=t.replace(/\bheal\b/gi,'healed');
+    t=t.replace(/\bhealed\s+from\b/gi,'healed of');
+    t=t.replace(/\bhealed\s+by\b/gi,'healed by');
+    t=t.replace(/\bdeliver\s+from\b/gi,'delivered from');
+    t=t.replace(/\bdeliver\s+of\b/gi,'delivered from');
+    t=t.replace(/\bdeliverd\b/gi,'delivered');
+    t=t.replace(/\bcast\s+out\b/gi,'cast out');
+    t=t.replace(/\bcasted\b/gi,'cast');
+    t=t.replace(/\bmanifested\b/gi,'manifested');
+    t=t.replace(/\bmanifest\b/gi,'manifested');
+    t=t.replace(/\bpossess\s+by\b/gi,'possessed by');
+    t=t.replace(/\bpossess\s+with\b/gi,'possessed by');
+    t=t.replace(/\bdemon possess\b/gi,'demon possessed');
+    t=t.replace(/\bwas\s+heal\b/gi,'was healed');
+    t=t.replace(/\bwas\s+deliver\b/gi,'was delivered');
+    t=t.replace(/\bgot\s+heal\b/gi,'got healed');
+    t=t.replace(/\bgot\s+deliver\b/gi,'got delivered');
+    t=t.replace(/\bget\s+heal\b/gi,'got healed');
+    t=t.replace(/\bget\s+deliver\b/gi,'got delivered');
+    t=t.replace(/\bmake\s+whole\b/gi,'made whole');
+    t=t.replace(/\bcan\s+now\s+walk\b/gi,'can now walk');
+    t=t.replace(/\bcan\s+now\s+see\b/gi,'can now see');
+    t=t.replace(/\bcan\s+now\s+hear\b/gi,'can now hear');
+    t=t.replace(/\bcan\s+now\s+speak\b/gi,'can now speak');
+    t=t.replace(/\bnow\s+can\s+walk\b/gi,'can now walk');
+    t=t.replace(/\bnow\s+can\s+see\b/gi,'can now see');
+    t=t.replace(/\bnow\s+can\s+hear\b/gi,'can now hear');
+    t=t.replace(/\bnow\s+can\s+speak\b/gi,'can now speak');
+    t=t.replace(/\bcome\s+out\b/gi,'came out');
+    t=t.replace(/\bfall\s+down\b/gi,'fell down');
+    t=t.replace(/\bstand\s+up\b/gi,'stood up');
+    t=t.replace(/\bwake\s+up\b/gi,'woke up');
+    t=t.replace(/\bget\s+up\b/gi,'got up');
+    t=t.replace(/\brise\s+up\b/gi,'rose up');
+    t=t.replace(/\bwalk\s+out\b/gi,'walked out');
+    t=t.replace(/\brun\s+out\b/gi,'ran out');
+
+    // STEP 4: Fix common spelling errors
+    t=t.replace(/\bhealding\b/gi,'healing');
+    t=t.replace(/\bhealded\b/gi,'healed');
+    t=t.replace(/\bdeliverance\b/gi,'deliverance');
+    t=t.replace(/\bdeliverd\b/gi,'delivered');
+    t=t.replace(/\bprophesy\b/gi,'prophecy');
+    t=t.replace(/\bprophesied\b/gi,'prophesied');
+    t=t.replace(/\bwitchraft\b/gi,'witchcraft');
+    t=t.replace(/\bwitchraft\b/gi,'witchcraft');
+    t=t.replace(/\bbondaged\b/gi,'bondage');
+    t=t.replace(/\bopressed\b/gi,'oppressed');
+    t=t.replace(/\bopression\b/gi,'oppression');
+    t=t.replace(/\bcanser\b/gi,'cancer');
+    t=t.replace(/\btumor\b/gi,'tumour');
+    t=t.replace(/\bparalysed\b/gi,'paralysed');
+    t=t.replace(/\bparalysis\b/gi,'paralysis');
+    t=t.replace(/\bwheel chair\b/gi,'wheelchair');
+    t=t.replace(/\bdeaf and dumb\b/gi,'deaf and mute');
+    t=t.replace(/\bblinded\b/gi,'blind');
+    t=t.replace(/\bseen\s+(him|her|it|the)\b/gi,'saw $1');
+    t=t.replace(/\bheared\b/gi,'heard');
+    t=t.replace(/\bwitnessed\b/gi,'witnessed');
+    t=t.replace(/\brecieve\b/gi,'receive');
+    t=t.replace(/\brecieved\b/gi,'received');
+    t=t.replace(/\bbelived\b/gi,'believed');
+    t=t.replace(/\bprayed\b/gi,'prayed');
+    t=t.replace(/\bpraying\b/gi,'praying');
+    t=t.replace(/\bprayer line\b/gi,'prayer line');
+    t=t.replace(/\baltar call\b/gi,'altar call');
+    t=t.replace(/\balter\b/gi,'altar');
+    t=t.replace(/\bpreaching\b/gi,'preaching');
+    t=t.replace(/\bpreached\b/gi,'preached');
+    t=t.replace(/\bprogram\b/gi,'programme');
+    t=t.replace(/\bsucceded\b/gi,'succeeded');
+    t=t.replace(/\brecieve\b/gi,'receive');
+    t=t.replace(/\bseperated\b/gi,'separated');
+    t=t.replace(/\boccured\b/gi,'occurred');
+    t=t.replace(/\buntill\b/gi,'until');
+    t=t.replace(/\bths\b/gi,'this');
+    t=t.replace(/\bthier\b/gi,'their');
+    t=t.replace(/\bthier\b/gi,'their');
+    t=t.replace(/\bpeopel\b/gi,'people');
+    t=t.replace(/\bcommitee\b/gi,'committee');
+    t=t.replace(/\bgoverment\b/gi,'government');
+    t=t.replace(/\bhospitel\b/gi,'hospital');
+    t=t.replace(/\bhospital\s+says\b/gi,'hospital said');
+    t=t.replace(/\bsays\s+it\s+was\b/gi,'said it was');
+    t=t.replace(/\bsays\s+it\s+is\b/gi,'said it is');
+    t=t.replace(/\bthem\s+say\b/gi,'they said');
+    t=t.replace(/\bthem\s+said\b/gi,'they said');
+
+    // STEP 5: Fix sentence flow and punctuation
+    t=t.replace(/\s+/g,' ').trim();
+    t=t.replace(/\.\s*([a-z])/g,function(m,l){return'. '+l.toUpperCase()});
+    t=t.replace(/\.\s*\./g,'.');
+    t=t.replace(/,\s*,/g,',');
+    t=t.replace(/\.\s+and\b/gi,'. And');
+    t=t.replace(/\.\s+but\b/gi,'. But');
+    t=t.replace(/\.\s+so\b/gi,'. So');
+    t=t.replace(/\.\s+then\b/gi,'. Then');
+    t=t.replace(/\.\s+he\b/gi,'. He');
+    t=t.replace(/\.\s+she\b/gi,'. She');
+    t=t.replace(/\.\s+the\b/gi,'. The');
+    t=t.replace(/\.\s+a\b/gi,'. A');
+    t=t.replace(/\.\s+it\b/gi,'. It');
+    t=t.replace(/\.\s+they\b/gi,'. They');
+    t=t.replace(/\.\s+we\b/gi,'. We');
+    t=t.replace(/\.\s+this\b/gi,'. This');
+    t=t.replace(/\.\s+that\b/gi,'. That');
+
+    // STEP 6: Capitalize first letter
+    t=t.charAt(0).toUpperCase()+t.slice(1);
+
+    // STEP 7: Capitalize proper nouns
+    t=t.replace(/\bgod\b/g,'God');
+    t=t.replace(/\bjesus\b/g,'Jesus');
+    t=t.replace(/\bholy spirit\b/g,'Holy Spirit');
+    t=t.replace(/\bchrist\b/g,'Christ');
+    t=t.replace(/\blord\b/g,'Lord');
+    t=t.replace(/\bbible\b/g,'Bible');
+    t=t.replace(/\bscripture\b/g,'Scripture');
+
+    // STEP 8: Add periods at end if missing
+    if(t.length>0&&!/[.!?]$/.test(t))t=t+'.';
+
+    return t;
+  }
+
+  // Live correction as user types
+  function setupCorrection(inputId,boxId,origId,fixedId){
+    var timeout;
+    document.getElementById(inputId).addEventListener('input',function(){
+      clearTimeout(timeout);
+      var self=this;
+      timeout=setTimeout(function(){
+        var raw=self.value.trim();
+        var corrected=correctEnglish(raw);
+        if(corrected&&corrected.toLowerCase()!==raw.toLowerCase()&&corrected!==raw){
+          document.getElementById(origId).textContent='Original: "'+raw+'"';
+          document.getElementById(fixedId).textContent='Corrected: "'+corrected+'"';
+          document.getElementById(boxId).style.display='block';
+        }else{
+          document.getElementById(boxId).style.display='none';
+        }
+      },1000);
     });
-  });
+  }
+
+  setupCorrection('miracleDesc','correctedBox','corrOriginal','corrFixed');
+  setupCorrection('packDesc','correctedBoxPack','corrOriginalPack','corrFixedPack');
+
+  function getCorrectedDescription(textareaId){
+    var raw=document.getElementById(textareaId).value.trim();
+    if(!raw)return raw;
+    var corrected=correctEnglish(raw);
+    if(corrected&&corrected.toLowerCase()!==raw.toLowerCase()&&corrected!==raw)return corrected;
+    return raw;
+  }
 
   // ==================== HELPERS ====================
   function seededRandom(seed){var x=Math.sin(seed)*10000;return x-Math.floor(x);}
-  function getPlat(p){
-    switch(p){
-      case'tiktok':return{maxTL:70,maxHT:10,suf:' 🎵',ex:['#FYP','#Viral','#ForYou']};
-      case'youtube':return{maxTL:90,maxHT:12,suf:'',ex:['#Jesus','#Testimony','#Christianity']};
-      case'instagram':return{maxTL:80,maxHT:11,suf:' ✨',ex:['#Explore','#Reels','#Faith']};
-      default:return{maxTL:80,maxHT:12,suf:' 🔥',ex:['#ViralVideo','#GodMove','#LightBearersMedia']};
-    }
-  }
-  function analyzeDesc(desc){
-    var l=desc.toLowerCase();var info={hasHealing:false,hasDeliverance:false,hasProphecy:false,hasResurrection:false,hasWorship:false,hasMiracle:false};
-    if(/\b(heal|healed|healing|cancer|tumor|blind|deaf|sick|pain|wheelchair|crippled|disease|recovery|restored)\b/i.test(l))info.hasHealing=true;
-    if(/\b(deliver|demon|demons|spirit|manifest|witchcraft|bondage|oppression|set free|cast out)\b/i.test(l))info.hasDeliverance=true;
-    if(/\b(prophec|prophet|prophetic|seer|vision|word of knowledge|reveal|hidden)\b/i.test(l))info.hasProphecy=true;
-    if(/\b(dead|death|raise|resurrect|life|casket|funeral|back to life)\b/i.test(l))info.hasResurrection=true;
-    if(/\b(worship|praise|presence|glory|anointing|altar)\b/i.test(l))info.hasWorship=true;
-    if(/\b(miracle|signs|wonders|supernatural|amazing|unbelievable|impossible)\b/i.test(l))info.hasMiracle=true;
-    return info;
-  }
+  function getPlat(p){switch(p){case'tiktok':return{maxTL:70,maxHT:10,suf:' 🎵',ex:['#FYP','#Viral','#ForYou']};case'youtube':return{maxTL:90,maxHT:12,suf:'',ex:['#Jesus','#Testimony','#Christianity']};case'instagram':return{maxTL:80,maxHT:11,suf:' ✨',ex:['#Explore','#Reels','#Faith']};default:return{maxTL:80,maxHT:12,suf:' 🔥',ex:['#ViralVideo','#GodMove','#LightBearersMedia']};}}
+  function analyzeDesc(desc){var l=desc.toLowerCase();var i={hasHealing:false,hasDeliverance:false,hasProphecy:false,hasResurrection:false,hasWorship:false,hasMiracle:false};if(/\b(heal|healed|healing|cancer|tumour|blind|deaf|sick|pain|wheelchair|crippled|disease|recovery|restored|paralysed)\b/i.test(l))i.hasHealing=true;if(/\b(deliver|demon|demons|spirit|manifest|witchcraft|bondage|oppression|set free|cast out|stricken|afflicted|attack|attacked|spiritual)\b/i.test(l))i.hasDeliverance=true;if(/\b(prophec|prophet|prophetic|seer|vision|word of knowledge|reveal|hidden)\b/i.test(l))i.hasProphecy=true;if(/\b(dead|death|raise|resurrect|life|casket|funeral|back to life)\b/i.test(l))i.hasResurrection=true;if(/\b(worship|praise|presence|glory|anointing|altar)\b/i.test(l))i.hasWorship=true;if(/\b(miracle|signs|wonders|supernatural|amazing|unbelievable|impossible)\b/i.test(l))i.hasMiracle=true;return i;}
   function extractKeyPhrase(desc){var clean=desc.replace(/[^a-zA-Z0-9\s]/g,'').trim();var words=clean.split(/\s+/);var key=words.slice(0,6).join(' ');if(key.length>60)key=key.slice(0,57)+'...';return key;}
-  function copyText(text,btn){
-    if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){btn.textContent='✅ Copied!';setTimeout(function(){btn.textContent='📋 Copy'},1500)}).catch(function(){alert('Copy manually')})}
-    else{alert('Copy manually: '+text)}
-  }
+  function copyText(text,btn){if(navigator.clipboard){var orig=btn.textContent;navigator.clipboard.writeText(text).then(function(){btn.textContent='✅ Copied!';setTimeout(function(){btn.textContent=orig},1500)}).catch(function(){alert('Copy manually')})}else{alert('Copy manually: '+text)}}
 
-  function buildTitle(desc,platform,tone,seed){
-    var info=analyzeDesc(desc);var key=extractKeyPhrase(desc);var pl=getPlat(platform);var r=seededRandom(seed);
-    var prefixes=[];
-    if(info.hasResurrection){prefixes=['💀 RAISED FROM THE DEAD! ','💀 DEATH DEFEATED! ','💀 BACK TO LIFE! ','💀 RESURRECTION GLORY! '];}
-    else if(info.hasHealing&&info.hasDeliverance){prefixes=['🔥 HEALED & DELIVERED! ','🔥 DOUBLE MIRACLE! ','🔥 FREEDOM & HEALING! '];}
-    else if(info.hasHealing){prefixes=['🩸 INSTANT HEALING! ','🩸 HEALED BY JESUS! ','🩸 SICKNESS DESTROYED! ','🩸 DOCTORS SPEECHLESS! '];}
-    else if(info.hasDeliverance){prefixes=['⚡ DEMONS CAST OUT! ','⚡ SET FREE! ','⚡ DELIVERANCE POWER! ','⚡ WITCHCRAFT DESTROYED! '];}
-    else if(info.hasProphecy){prefixes=['🔮 PROPHETIC WORD! ','🔮 GOD REVEALED IT! ','🔮 SEER ANOINTING! '];}
-    else if(info.hasMiracle){prefixes=['🌟 POWERFUL MIRACLE! ','🌟 SIGNS & WONDERS! ','🌟 GOD DID IT! '];}
-    else if(info.hasWorship){prefixes=['🙌 GLORY OF GOD! ','🙌 HEAVEN INVADED! ','🙌 WORSHIP BREAKTHROUGH! '];}
-    else{prefixes=['🙏 GOD MOVED! ','🙏 MUST WATCH! ','🙏 POWER OF GOD! '];}
-    var prefix=prefixes[Math.floor(r*prefixes.length)];
-    var suffixes=['MUST WATCH!','DON\'T SCROLL!','THIS IS REAL!','GLOBAL REVIVAL!','TRENDING NOW!','VIRAL MIRACLE!','GOD IS MOVING!','MILLIONS WATCHING!','SHARE THIS NOW!','THE WORLD MUST SEE!'];
-    var suffix=suffixes[Math.floor(r*suffixes.length)];
-    var title=prefix+key.charAt(0).toUpperCase()+key.slice(1)+' – '+suffix;
-    if(title.length>pl.maxTL)title=title.slice(0,pl.maxTL-3)+'...';
-    return title+pl.suf;
-  }
-
-  function buildHook(desc,tone,seed){
-    var info=analyzeDesc(desc);var r=seededRandom(seed);var allHooks=[];
-    if(info.hasHealing){allHooks.push('⚠️ WATCH TILL THE END – THIS HEALING WILL SHOCK YOU!','🔥 DOCTORS CAN\'T EXPLAIN WHAT JUST HAPPENED...','🩸 SICKNESS GONE IN SECONDS – WATCH THIS NOW!','😱 THE PAIN LEFT INSTANTLY — YOU MUST SEE THIS!','💔 THEY SAID IT WAS IMPOSSIBLE... THEN GOD STEPPED IN!');}
-    if(info.hasDeliverance){allHooks.push('⚡ DEMONS MANIFESTED AND FLED – CAUGHT ON CAMERA!','🔥 DELIVERANCE POWER SHOOK THE WHOLE ROOM!','😱 WITCHCRAFT DESTROYED IN SECONDS – WATCH!','⚡ THE SPIRIT SCREAMED AND LEFT – UNBELIEVABLE!');}
-    if(info.hasResurrection){allHooks.push('💀 THE DEAD RAISED – THIS IS NOT A MOVIE!','💀 FROM DEATH TO LIFE – WITNESS THIS MIRACLE!');}
-    if(info.hasProphecy){allHooks.push('🔮 GOD REVEALED WHAT NO ONE KNEW – WATCH!','👁️ THE SEER SPOKE AND IT HAPPENED IMMEDIATELY!');}
-    if(info.hasWorship){allHooks.push('🙌 HEAVEN INVADED THIS PLACE – YOU CAN FEEL IT!','🔥 THE GLORY CLOUD APPEARED – WATCH TILL END!');}
-    if(allHooks.length===0){allHooks=['😱 WHAT JUST HAPPENED?! WATCH THIS NOW!','⚠️ YOU WON\'T BELIEVE WHAT HAPPENS NEXT...','🔥 THE POWER OF GOD HIT AND EVERYTHING CHANGED!','🙌 THIS MIRACLE IS TRENDING WORLDWIDE!','⚡ STOP SCROLLING — THIS WILL BLESS YOU!','🌍 MILLIONS ARE WATCHING THIS MIRACLE!'];}
-    return allHooks[Math.floor(r*allHooks.length)];
-  }
-
-  function buildCaption(desc,tone,seed){
-    var intros={powerful:['🔥 VIRAL MIRACLE ALERT! Watch what God did:','⚡ POWERFUL TESTIMONY! See how God moved:','🔥 GOD SHOWED UP MIGHTILY! Watch this:'],emotional:['😭 This testimony will touch your heart:','💔 Prepare to cry — watch what happened:','😭 You need to see this powerful moment:'],shocking:['😱 You won\'t believe what just happened:','⚠️ This miracle left everyone speechless:','😱 CAUGHT ON CAMERA — See for yourself:'],teaching:['📖 A powerful testimony for your faith:','📖 Learn from this incredible miracle:','📖 God is still teaching us — watch:'],worship:['🙌 The glory of God filled the place:','🙌 Heaven touched earth in this moment:','🙌 Worship broke open the heavens:']};
-    var arr=intros[tone]||intros.powerful;var r=seededRandom(seed);var intro=arr[Math.floor(r*arr.length)];
-    return intro+' '+desc+'\n\n🙏 LIKE + SHARE + COMMENT "JESUS" if you believe!\n🔔 FOLLOW @LightBearersMedia for more kingdom content\n🌍 SHARE THIS — let the world see what God is doing!';
-  }
-
-  function buildCTA(tone,seed){
-    var r=seededRandom(seed);var ctas={powerful:['💬 Comment "POWER" if you felt that! 👇🔥','💬 Type "GLORY" if this blessed you! 👇','💬 Comment "I BELIEVE" right now! 👇🔥'],emotional:['😭 Drop a ❤️ if this touched your heart!','😭 Comment "JESUS" if this moved you!','😭 Type "AMEN" if you were blessed! 👇'],shocking:['😱 Type "WOW" — the algorithm loves comments!','😱 Comment "UNBELIEVABLE" if you agree!','😱 Drop a 🔥 if this shocked you!'],teaching:['📖 SAVE this & SHARE with someone who needs faith!','📖 Comment "I LEARNED" if this blessed you!','📖 SHARE this revelation with a friend!'],worship:['🙌 Type "GLORY" if you love His presence! 👇','🙌 Comment "HOLY" if you felt the anointing!','🙌 Drop "🔥" if you felt the glory!']};
-    var arr=ctas[tone]||ctas.powerful;return arr[Math.floor(r*arr.length)];
-  }
-
-  function buildReply(tone,seed){
-    var r=seededRandom(seed);var replies={powerful:['🙏 If God touched you, type "I RECEIVE MY MIRACLE" and SHARE with 5 people! 🔥🌍','🙏 Type "I BELIEVE IN MIRACLES" and SHARE this video now! 🔥'],emotional:['😭 We serve a God who still heals! Comment "THANK YOU JESUS" and FOLLOW for more! ❤️','😭 If this blessed you, type "AMEN" and SHARE with someone! ❤️'],shocking:['😱 YES — this is 100% REAL! Raw power of God. Comment "I BELIEVE"! 🙏🔥','😱 No editing. No filters. Just GOD. Type "WOW" and SHARE! 🙏'],teaching:['📖 Want to grow deeper? FOLLOW @LightBearersMedia and turn on NOTIFICATIONS! 🙏','📖 SAVE this video and watch it again when you need faith! 🙏'],worship:['🙌 His presence is REAL! Type "GLORY TO GOD" and worship with us! FOLLOW for more! 🔥','🙌 If you felt His presence, type "HOLY SPIRIT" and SHARE! 🔥']};
-    var arr=replies[tone]||replies.powerful;return arr[Math.floor(r*arr.length)];
-  }
-
-  function buildHashtags(desc,platform){
-    var pl=getPlat(platform),l=desc.toLowerCase();
-    var base=['#JesusHeals','#Miracle','#PowerOfGod','#HolySpirit','#Supernatural','#Faith','#GodIsGood','#LightBearersMedia'];
-    var dyn=[];
-    if(/\b(heal|cancer|tumor|blind|deaf|sick|pain|wheelchair|crippled|disease|recovery)\b/i.test(l))dyn.push('#HealingMiracle','#InstantHealing');
-    if(/\b(deliver|demon|spirit|witchcraft|bondage|cast out|set free)\b/i.test(l))dyn.push('#Deliverance','#SetFree');
-    if(/\b(prophec|prophet|seer|vision|reveal)\b/i.test(l))dyn.push('#Prophecy','#SeerAnointing');
-    if(/\b(miracle|signs|wonders|supernatural|amazing)\b/i.test(l))dyn.push('#SignsAndWonders','#GloryOfGod');
-    if(/\b(dead|raise|resurrect|back to life)\b/i.test(l))dyn.push('#ResurrectionPower','#JesusWins');
-    if(/\b(worship|praise|presence|glory)\b/i.test(l))dyn.push('#WorshipEncounter','#PresenceOfGod');
-    var all=base.concat(dyn).concat(pl.ex);var seen={},result=[];
-    all.forEach(function(t){var lo=t.toLowerCase();if(!seen[lo]){seen[lo]=true;result.push(t);}});
-    return result.slice(0,pl.maxHT);
-  }
+  function buildTitle(desc,platform,tone,seed){var info=analyzeDesc(desc);var key=extractKeyPhrase(desc);var pl=getPlat(platform);var r=seededRandom(seed);var prefixes=[];if(info.hasResurrection){prefixes=['💀 RAISED FROM THE DEAD! ','💀 DEATH DEFEATED! ','💀 BACK TO LIFE! ','💀 RESURRECTION GLORY! '];}else if(info.hasHealing&&info.hasDeliverance){prefixes=['🔥 HEALED & DELIVERED! ','🔥 DOUBLE MIRACLE! ','🔥 FREEDOM & HEALING! '];}else if(info.hasHealing){prefixes=['🩸 INSTANT HEALING! ','🩸 HEALED BY JESUS! ','🩸 SICKNESS DESTROYED! ','🩸 DOCTORS SPEECHLESS! '];}else if(info.hasDeliverance){prefixes=['⚡ DEMONS CAST OUT! ','⚡ SET FREE! ','⚡ DELIVERANCE POWER! ','⚡ WITCHCRAFT DESTROYED! '];}else if(info.hasProphecy){prefixes=['🔮 PROPHETIC WORD! ','🔮 GOD REVEALED IT! ','🔮 SEER ANOINTING! '];}else if(info.hasMiracle){prefixes=['🌟 POWERFUL MIRACLE! ','🌟 SIGNS & WONDERS! ','🌟 GOD DID IT! '];}else if(info.hasWorship){prefixes=['🙌 GLORY OF GOD! ','🙌 HEAVEN INVADED! ','🙌 WORSHIP BREAKTHROUGH! '];}else{prefixes=['🙏 GOD MOVED! ','🙏 MUST WATCH! ','🙏 POWER OF GOD! '];}var prefix=prefixes[Math.floor(r*prefixes.length)];var suffixes=['MUST WATCH!','DON\'T SCROLL!','THIS IS REAL!','GLOBAL REVIVAL!','TRENDING NOW!','VIRAL MIRACLE!','GOD IS MOVING!','MILLIONS WATCHING!','SHARE THIS NOW!','THE WORLD MUST SEE!'];var suffix=suffixes[Math.floor(r*suffixes.length)];var title=prefix+key.charAt(0).toUpperCase()+key.slice(1)+' – '+suffix;if(title.length>pl.maxTL)title=title.slice(0,pl.maxTL-3)+'...';return title+pl.suf;}
+  function buildHook(desc,tone,seed){var info=analyzeDesc(desc);var r=seededRandom(seed);var allHooks=[];if(info.hasHealing){allHooks.push('⚠️ WATCH TILL THE END – THIS HEALING WILL SHOCK YOU!','🔥 DOCTORS CAN\'T EXPLAIN WHAT JUST HAPPENED...','🩸 SICKNESS GONE IN SECONDS – WATCH THIS NOW!','😱 THE PAIN LEFT INSTANTLY — YOU MUST SEE THIS!','💔 THEY SAID IT WAS IMPOSSIBLE... THEN GOD STEPPED IN!');}if(info.hasDeliverance){allHooks.push('⚡ DEMONS MANIFESTED AND FLED – CAUGHT ON CAMERA!','🔥 DELIVERANCE POWER SHOOK THE WHOLE ROOM!','😱 WITCHCRAFT DESTROYED IN SECONDS – WATCH!','⚡ THE SPIRIT SCREAMED AND LEFT – UNBELIEVABLE!');}if(info.hasResurrection){allHooks.push('💀 THE DEAD RAISED – THIS IS NOT A MOVIE!','💀 FROM DEATH TO LIFE – WITNESS THIS MIRACLE!');}if(info.hasProphecy){allHooks.push('🔮 GOD REVEALED WHAT NO ONE KNEW – WATCH!','👁️ THE SEER SPOKE AND IT HAPPENED IMMEDIATELY!');}if(info.hasWorship){allHooks.push('🙌 HEAVEN INVADED THIS PLACE – YOU CAN FEEL IT!','🔥 THE GLORY CLOUD APPEARED – WATCH TILL END!');}if(allHooks.length===0){allHooks=['😱 WHAT JUST HAPPENED?! WATCH THIS NOW!','⚠️ YOU WON\'T BELIEVE WHAT HAPPENS NEXT...','🔥 THE POWER OF GOD HIT AND EVERYTHING CHANGED!','🙌 THIS MIRACLE IS TRENDING WORLDWIDE!','⚡ STOP SCROLLING — THIS WILL BLESS YOU!','🌍 MILLIONS ARE WATCHING THIS MIRACLE!'];}return allHooks[Math.floor(r*allHooks.length)];}
+  function buildCaption(desc,tone,seed){var intros={powerful:['🔥 VIRAL MIRACLE ALERT! Watch what God did:','⚡ POWERFUL TESTIMONY! See how God moved:','🔥 GOD SHOWED UP MIGHTILY! Watch this:'],emotional:['😭 This testimony will touch your heart:','💔 Prepare to cry — watch what happened:','😭 You need to see this powerful moment:'],shocking:['😱 You won\'t believe what just happened:','⚠️ This miracle left everyone speechless:','😱 CAUGHT ON CAMERA — See for yourself:'],teaching:['📖 A powerful testimony for your faith:','📖 Learn from this incredible miracle:','📖 God is still teaching us — watch:'],worship:['🙌 The glory of God filled the place:','🙌 Heaven touched earth in this moment:','🙌 Worship broke open the heavens:']};var arr=intros[tone]||intros.powerful;var r=seededRandom(seed);var intro=arr[Math.floor(r*arr.length)];return intro+' '+desc+'\n\n🙏 LIKE + SHARE + COMMENT "JESUS" if you believe!\n🔔 FOLLOW @LightBearersMedia for more kingdom content\n🌍 SHARE THIS — let the world see what God is doing!';}
+  function buildCTA(tone,seed){var r=seededRandom(seed);var ctas={powerful:['💬 Comment "POWER" if you felt that! 👇🔥','💬 Type "GLORY" if this blessed you! 👇','💬 Comment "I BELIEVE" right now! 👇🔥'],emotional:['😭 Drop a ❤️ if this touched your heart!','😭 Comment "JESUS" if this moved you!','😭 Type "AMEN" if you were blessed! 👇'],shocking:['😱 Type "WOW" — the algorithm loves comments!','😱 Comment "UNBELIEVABLE" if you agree!','😱 Drop a 🔥 if this shocked you!'],teaching:['📖 SAVE this & SHARE with someone who needs faith!','📖 Comment "I LEARNED" if this blessed you!','📖 SHARE this revelation with a friend!'],worship:['🙌 Type "GLORY" if you love His presence! 👇','🙌 Comment "HOLY" if you felt the anointing!','🙌 Drop "🔥" if you felt the glory!']};var arr=ctas[tone]||ctas.powerful;return arr[Math.floor(r*arr.length)];}
+  function buildReply(tone,seed){var r=seededRandom(seed);var replies={powerful:['🙏 If God touched you, type "I RECEIVE MY MIRACLE" and SHARE with 5 people! 🔥🌍','🙏 Type "I BELIEVE IN MIRACLES" and SHARE this video now! 🔥'],emotional:['😭 We serve a God who still heals! Comment "THANK YOU JESUS" and FOLLOW for more! ❤️','😭 If this blessed you, type "AMEN" and SHARE with someone! ❤️'],shocking:['😱 YES — this is 100% REAL! Raw power of God. Comment "I BELIEVE"! 🙏🔥','😱 No editing. No filters. Just GOD. Type "WOW" and SHARE! 🙏'],teaching:['📖 Want to grow deeper? FOLLOW @LightBearersMedia and turn on NOTIFICATIONS! 🙏','📖 SAVE this video and watch it again when you need faith! 🙏'],worship:['🙌 His presence is REAL! Type "GLORY TO GOD" and worship with us! FOLLOW for more! 🔥','🙌 If you felt His presence, type "HOLY SPIRIT" and SHARE! 🔥']};var arr=replies[tone]||replies.powerful;return arr[Math.floor(r*arr.length)];}
+  function buildHashtags(desc,platform){var pl=getPlat(platform),l=desc.toLowerCase();var base=['#JesusHeals','#Miracle','#PowerOfGod','#HolySpirit','#Supernatural','#Faith','#GodIsGood','#LightBearersMedia'];var dyn=[];if(/\b(heal|cancer|tumour|blind|deaf|sick|pain|wheelchair|crippled|disease|recovery|paralysed)\b/i.test(l))dyn.push('#HealingMiracle','#InstantHealing');if(/\b(deliver|demon|spirit|witchcraft|bondage|cast out|set free|stricken|spiritual attack)\b/i.test(l))dyn.push('#Deliverance','#SetFree');if(/\b(prophec|prophet|seer|vision|reveal)\b/i.test(l))dyn.push('#Prophecy','#SeerAnointing');if(/\b(miracle|signs|wonders|supernatural|amazing)\b/i.test(l))dyn.push('#SignsAndWonders','#GloryOfGod');if(/\b(dead|raise|resurrect|back to life)\b/i.test(l))dyn.push('#ResurrectionPower','#JesusWins');if(/\b(worship|praise|presence|glory)\b/i.test(l))dyn.push('#WorshipEncounter','#PresenceOfGod');var all=base.concat(dyn).concat(pl.ex);var seen={},result=[];all.forEach(function(t){var lo=t.toLowerCase();if(!seen[lo]){seen[lo]=true;result.push(t);}});return result.slice(0,pl.maxHT);}
 
   // ==================== TAB 1: GENERATE ====================
-  var generateCounter=0;
-  var curT='',curH=[],curCap='',curCTA='',curHook='',curReply='',allV=[];
+  var generateCounter=0,curT='',curH=[],curCap='',curCTA='',curHook='',curReply='',allV=[];
   var generatedContent={title:'',hook:'',caption:'',hashtags:'',cta:'',reply:''};
 
   function render(showBulk){
-    var desc=document.getElementById('miracleDesc').value.trim();
+    var desc=getCorrectedDescription('miracleDesc');
     if(!desc){document.getElementById('resultBox').style.display='none';return}
     generateCounter++;
     var p=document.getElementById('platformSelect').value,tn=document.getElementById('toneSelect').value;
     var s1=generateCounter*7+1,s2=generateCounter*13+3,s3=generateCounter*17+5;
     curT=buildTitle(desc,p,tn,s1);curH=buildHashtags(desc,p);curCap=buildCaption(desc,tn,s2);curCTA=buildCTA(tn,s3);curHook=buildHook(desc,tn,s1);curReply=buildReply(tn,s2);
     generatedContent={title:curT,hook:curHook,caption:curCap,hashtags:curH.join(' '),cta:curCTA,reply:curReply};
-    document.getElementById('titleText').textContent=curT;document.getElementById('hookText').textContent=curHook;
-    document.getElementById('captionText').textContent=curCap;document.getElementById('ctaText').textContent=curCTA;
-    document.getElementById('replyText').textContent=curReply;document.getElementById('versionBadge').textContent='V'+generateCounter;
-    var hc=document.getElementById('hashtagContainer');hc.innerHTML='';
-    curH.forEach(function(t){var s=document.createElement('span');s.className='hashtag';s.textContent=t;hc.appendChild(s)});
+    document.getElementById('titleText').textContent=curT;document.getElementById('hookText').textContent=curHook;document.getElementById('captionText').textContent=curCap;document.getElementById('ctaText').textContent=curCTA;document.getElementById('replyText').textContent=curReply;document.getElementById('versionBadge').textContent='V'+generateCounter;
+    var hc=document.getElementById('hashtagContainer');hc.innerHTML='';curH.forEach(function(t){var s=document.createElement('span');s.className='hashtag';s.textContent=t;hc.appendChild(s)});
     if(showBulk){allV=[];for(var i=1;i<=5;i++)allV.push(buildTitle(desc,p,tn,generateCounter*10+i));var vl=document.getElementById('variantList');vl.innerHTML='';allV.forEach(function(v){var sp=document.createElement('span');sp.className='variant-item';sp.textContent=v;sp.addEventListener('click',function(){curT=v;document.getElementById('titleText').textContent=v;generatedContent.title=v});vl.appendChild(sp)});document.getElementById('bulkContainer').style.display='block'}else{document.getElementById('bulkContainer').style.display='none'}
     document.getElementById('resultBox').style.display='block';
   }
@@ -327,116 +386,54 @@
   document.getElementById('copyCTA').addEventListener('click',function(){copyText(curCTA,document.getElementById('copyCTA'))});
   document.getElementById('copyReply').addEventListener('click',function(){copyText(curReply,document.getElementById('copyReply'))});
 
-  // ==================== TAB 2: CONTENT PACK (RICH FORMAT) ====================
+  // ==================== TAB 2: CONTENT PACK ====================
+  var packData={title:'',hook:'',caption:'',hashtags:'',cta:'',reply:''};
   document.getElementById('packBtn').addEventListener('click',function(){
-    var desc=document.getElementById('packDesc').value.trim();
+    var desc=getCorrectedDescription('packDesc');
     if(!desc)return alert('Please describe the miracle first.');
     generateCounter++;
     var p=document.getElementById('packPlatform').value,tn=document.getElementById('packTone').value;
     var ti=buildTitle(desc,p,tn,generateCounter*7+1),ho=buildHook(desc,tn,generateCounter*13+3),ca=buildCaption(desc,tn,generateCounter*17+5),ha=buildHashtags(desc,p),ct=buildCTA(tn,generateCounter*19+7),re=buildReply(tn,generateCounter*23+9);
-    generatedContent={title:ti,hook:ho,caption:ca,hashtags:ha.join(' '),cta:ct,reply:re};
-
-    // Fill the rich pack layout
-    document.getElementById('packTitle').textContent=ti;
-    document.getElementById('packHook').textContent=ho;
-    document.getElementById('packCaption').textContent=ca;
-    document.getElementById('packCTA').textContent=ct;
-    document.getElementById('packReply').textContent=re;
-    var hg=document.getElementById('packHashtagsGroup');hg.innerHTML='';
-    ha.forEach(function(t){var s=document.createElement('span');s.className='hashtag';s.textContent=t;hg.appendChild(s)});
-    document.getElementById('packHashtagsText').textContent=ha.join(' ');
-
-    // Build the full pack text for the COPY button
-    var fullPackText='══════════════════════════════\n   📦 LBM COMPLETE CONTENT PACK\n   Light Bearers Media\n══════════════════════════════\n\n🏆 TITLE (Copy & paste as your video title):\n'+ti+'\n\n🔴 TEXT OVERLAY — FIRST 3 SECONDS (Put on screen):\n'+ho+'\n\n📝 VIDEO CAPTION / DESCRIPTION:\n'+ca+'\n\n💬 ENGAGEMENT CALL-TO-ACTION (End of caption):\n'+ct+'\n\n📌 PINNED COMMENT (Pin as first comment):\n'+re+'\n\n#️⃣ HASHTAGS (Copy all at once):\n'+ha.join(' ')+'\n\n══════════════════════════════\n📱 Post to: TikTok | YouTube | Instagram | Facebook\n⚡ Follow: @LightBearersMedia\n🌍 Light Bearers International\n══════════════════════════════';
-    window._fullPack=fullPackText;
-
+    generatedContent={title:ti,hook:ho,caption:ca,hashtags:ha.join(' '),cta:ct,reply:re};packData={title:ti,hook:ho,caption:ca,hashtags:ha.join(' '),cta:ct,reply:re};
+    document.getElementById('packTitle').textContent=ti;document.getElementById('packHook').textContent=ho;document.getElementById('packCaption').textContent=ca;document.getElementById('packCTA').textContent=ct;document.getElementById('packReply').textContent=re;
+    var hg=document.getElementById('packHashtagsGroup');hg.innerHTML='';ha.forEach(function(t){var s=document.createElement('span');s.className='hashtag';s.textContent=t;hg.appendChild(s)});document.getElementById('packHashtagsText').textContent=ha.join(' ');
+    window._fullPack='══════════════════════════════\n   📦 LBM COMPLETE CONTENT PACK\n   Light Bearers Media\n══════════════════════════════\n\n🏆 TITLE:\n'+ti+'\n\n🔴 HOOK (First 3 Sec):\n'+ho+'\n\n📝 CAPTION:\n'+ca+'\n\n💬 CTA:\n'+ct+'\n\n📌 PINNED COMMENT:\n'+re+'\n\n#️⃣ HASHTAGS:\n'+ha.join(' ')+'\n\n══════════════════════════════\n📱 TikTok | YouTube | Instagram | Facebook\n⚡ @LightBearersMedia | 🌍 Light Bearers International\n══════════════════════════════';
     document.getElementById('packResult').style.display='block';
   });
-
-  document.getElementById('copyFullPack').addEventListener('click',function(){
-    if(window._fullPack){
-      copyText(window._fullPack,document.getElementById('copyFullPack'));
-    }
-  });
+  document.getElementById('copyPackTitle').addEventListener('click',function(){if(packData.title)copyText(packData.title,document.getElementById('copyPackTitle'))});
+  document.getElementById('copyPackHook').addEventListener('click',function(){if(packData.hook)copyText(packData.hook,document.getElementById('copyPackHook'))});
+  document.getElementById('copyPackCaption').addEventListener('click',function(){if(packData.caption)copyText(packData.caption,document.getElementById('copyPackCaption'))});
+  document.getElementById('copyPackHashtags').addEventListener('click',function(){if(packData.hashtags)copyText(packData.hashtags,document.getElementById('copyPackHashtags'))});
+  document.getElementById('copyPackCTA').addEventListener('click',function(){if(packData.cta)copyText(packData.cta,document.getElementById('copyPackCTA'))});
+  document.getElementById('copyPackReply').addEventListener('click',function(){if(packData.reply)copyText(packData.reply,document.getElementById('copyPackReply'))});
+  document.getElementById('copyFullPack').addEventListener('click',function(){if(window._fullPack)copyText(window._fullPack,document.getElementById('copyFullPack'))});
 
   // ==================== TAB 3: TRANSLATE ====================
   var transLang='fr';
-  document.querySelectorAll('#transLangButtons .lang-flag-btn').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('#transLangButtons .lang-flag-btn').forEach(function(x){x.classList.remove('active-lang')});
-      b.classList.add('active-lang');transLang=b.dataset.lang;
-    });
-  });
-
-  var dict={
-    fr:{
-      'raised from the dead':'ressuscité des morts','death defeated':'mort vaincue','back to life':'de retour à la vie','resurrection glory':'gloire de résurrection','healed & delivered':'guéri et délivré','double miracle':'double miracle','freedom & healing':'liberté et guérison','instant healing':'guérison instantanée','healed by jesus':'guéri par jésus','sickness destroyed':'maladie détruite','doctors speechless':'médecins sans voix','demons cast out':'démons chassés','set free':'libéré','deliverance power':'puissance de délivrance','witchcraft destroyed':'sorcellerie détruite','prophetic word':'parole prophétique','god revealed it':'dieu l\'a révélé','seer anointing':'onction de voyant','powerful miracle':'miracle puissant','signs & wonders':'signes et prodiges','god did it':'dieu l\'a fait','glory of god':'gloire de dieu','heaven invaded':'le ciel a envahi','worship breakthrough':'percée de louange','god moved':'dieu a agi','must watch':'à voir absolument','power of god':'puissance de dieu','don\'t scroll':'ne faites pas défiler','this is real':'c\'est réel','global revival':'réveil mondial','trending now':'tendance','viral miracle':'miracle viral','god is moving':'dieu agit','millions watching':'millions regardent','share this now':'partagez maintenant','the world must see':'le monde doit voir',
-      'watch till the end – this healing will shock you':'regardez jusqu\'à la fin – cette guérison va vous choquer','doctors can\'t explain what just happened':'les médecins ne peuvent expliquer ce qui vient d\'arriver','sickness gone in seconds – watch this now':'maladie disparue en secondes – regardez maintenant','the pain left instantly — you must see this':'la douleur est partie instantanément — vous devez voir ça','they said it was impossible... then god stepped in':'ils ont dit que c\'était impossible... puis dieu est intervenu','demons manifested and fled – caught on camera':'les démons se sont manifestés et ont fui – filmé en direct','deliverance power shook the whole room':'la puissance de délivrance a secoué toute la salle','witchcraft destroyed in seconds – watch':'sorcellerie détruite en secondes – regardez','the spirit screamed and left – unbelievable':'l\'esprit a crié et est parti – incroyable','the dead raised – this is not a movie':'les morts ressuscités – ce n\'est pas un film','from death to life – witness this miracle':'de la mort à la vie – témoin de ce miracle','god revealed what no one knew – watch':'dieu a révélé ce que personne ne savait – regardez','the seer spoke and it happened immediately':'le voyant a parlé et c\'est arrivé immédiatement','heaven invaded this place – you can feel it':'le ciel a envahi cet endroit – vous pouvez le sentir','the glory cloud appeared – watch till end':'la nuée de gloire est apparue – regardez jusqu\'à la fin','what just happened?! watch this now':'que s\'est-il passé ?! regardez maintenant','you won\'t believe what happens next':'vous ne croirez pas ce qui arrive ensuite','the power of god hit and everything changed':'la puissance de dieu a frappé et tout a changé','this miracle is trending worldwide':'ce miracle est tendance mondiale','stop scrolling — this will bless you':'arrêtez de défiler — cela va vous bénir','millions are watching this miracle':'des millions regardent ce miracle',
-      'woman':'femme','man':'homme','child':'enfant','with':'avec','stage':'stade','cancer':'cancer','healed':'guéri','instantly':'instantanément','during':'pendant','prayer':'prière','line':'ligne','service':'service','worship':'louange','church':'église','years':'ans','deaf':'sourd','blind':'aveugle','sick':'malade','disease':'maladie','pain':'douleur','tumor':'tumeur','dead':'mort','death':'mort','delivered':'délivré','demon':'démon','demons':'démons','spirit':'esprit','witchcraft':'sorcellerie','freedom':'liberté','prophecy':'prophétie','prophetic':'prophétique','seer':'voyant','vision':'vision','miracle':'miracle','supernatural':'surnaturel','power':'puissance','glory':'gloire','jesus':'jésus','god':'dieu','holy spirit':'saint-esprit','heaven':'ciel','faith':'foi','testimony':'témoignage','like':'aimez','share':'partagez','comment':'commentez','follow':'suivez','believe':'croyez','receive':'recevez','thank you':'merci','save':'enregistrez','type':'tapez','real':'réel','viral':'viral','global':'mondial'
-    },
-    es:{
-      'raised from the dead':'resucitado de los muertos','death defeated':'muerte vencida','back to life':'de vuelta a la vida','resurrection glory':'gloria de resurrección','healed & delivered':'sanado y liberado','double miracle':'doble milagro','freedom & healing':'libertad y sanidad','instant healing':'sanidad instantánea','healed by jesus':'sanado por jesús','sickness destroyed':'enfermedad destruida','doctors speechless':'médicos sin palabras','demons cast out':'demonios expulsados','set free':'liberado','deliverance power':'poder de liberación','witchcraft destroyed':'brujería destruida','prophetic word':'palabra profética','god revealed it':'dios lo reveló','seer anointing':'unción de vidente','powerful miracle':'milagro poderoso','signs & wonders':'señales y maravillas','god did it':'dios lo hizo','glory of god':'gloria de dios','heaven invaded':'el cielo invadió','worship breakthrough':'avance de adoración','god moved':'dios se movió','must watch':'debes verlo','power of god':'poder de dios','don\'t scroll':'no deslices','this is real':'esto es real','global revival':'avivamiento global','trending now':'tendencia','viral miracle':'milagro viral','god is moving':'dios se mueve','millions watching':'millones mirando','share this now':'comparte ahora','the world must see':'el mundo debe ver',
-      'watch till the end – this healing will shock you':'mira hasta el final – esta sanidad te impactará','doctors can\'t explain what just happened':'los médicos no pueden explicar lo que acaba de pasar','sickness gone in seconds – watch this now':'enfermedad desaparecida en segundos – mira ahora','the pain left instantly — you must see this':'el dolor se fue al instante — debes ver esto','they said it was impossible... then god stepped in':'dijeron que era imposible... luego dios intervino','demons manifested and fled – caught on camera':'demonios se manifestaron y huyeron – grabado en cámara','deliverance power shook the whole room':'el poder de liberación sacudió toda la sala','witchcraft destroyed in seconds – watch':'brujería destruida en segundos – mira','the spirit screamed and left – unbelievable':'el espíritu gritó y se fue – increíble','the dead raised – this is not a movie':'los muertos resucitados – esto no es una película','from death to life – witness this miracle':'de la muerte a la vida – presencia este milagro','god revealed what no one knew – watch':'dios reveló lo que nadie sabía – mira','the seer spoke and it happened immediately':'el vidente habló y sucedió inmediatamente','heaven invaded this place – you can feel it':'el cielo invadió este lugar – puedes sentirlo','the glory cloud appeared – watch till end':'la nube de gloria apareció – mira hasta el final','what just happened?! watch this now':'¡¿qué acaba de pasar?! mira esto ahora','you won\'t believe what happens next':'no creerás lo que pasa después','the power of god hit and everything changed':'el poder de dios golpeó y todo cambió','this miracle is trending worldwide':'este milagro es tendencia mundial','stop scrolling — this will bless you':'deja de deslizar — esto te bendecirá','millions are watching this miracle':'millones están viendo este milagro',
-      'woman':'mujer','man':'hombre','child':'niño','with':'con','stage':'etapa','cancer':'cáncer','healed':'sanado','instantly':'al instante','during':'durante','prayer':'oración','line':'línea','service':'servicio','worship':'adoración','church':'iglesia','years':'años','deaf':'sordo','blind':'ciego','sick':'enfermo','disease':'enfermedad','pain':'dolor','tumor':'tumor','dead':'muerto','death':'muerte','delivered':'liberado','demon':'demonio','demons':'demonios','spirit':'espíritu','witchcraft':'brujería','freedom':'libertad','prophecy':'profecía','prophetic':'profético','seer':'vidente','vision':'visión','miracle':'milagro','supernatural':'sobrenatural','power':'poder','glory':'gloria','jesus':'jesús','god':'dios','holy spirit':'espíritu santo','heaven':'cielo','faith':'fe','testimony':'testimonio','like':'me gusta','share':'comparte','comment':'comenta','follow':'sigue','believe':'cree','receive':'recibe','thank you':'gracias','save':'guarda','type':'escribe','real':'real','viral':'viral','global':'global'
-    },
-    pt:{
-      'raised from the dead':'ressuscitado dos mortos','death defeated':'morte vencida','back to life':'de volta à vida','resurrection glory':'glória da ressurreição','healed & delivered':'curado e liberto','double miracle':'milagre duplo','freedom & healing':'liberdade e cura','instant healing':'cura instantânea','healed by jesus':'curado por jesus','sickness destroyed':'doença destruída','doctors speechless':'médicos sem palavras','demons cast out':'demônios expulsos','set free':'liberto','deliverance power':'poder de libertação','witchcraft destroyed':'feitiçaria destruída','prophetic word':'palavra profética','god revealed it':'deus revelou','seer anointing':'unção de vidente','powerful miracle':'milagre poderoso','signs & wonders':'sinais e maravilhas','god did it':'deus fez','glory of god':'glória de deus','heaven invaded':'o céu invadiu','worship breakthrough':'avanço de adoração','god moved':'deus se moveu','must watch':'precisa ver','power of god':'poder de deus','don\'t scroll':'não role','this is real':'isto é real','global revival':'avivamento global','trending now':'tendência','viral miracle':'milagre viral','god is moving':'deus está se movendo','millions watching':'milhões assistindo','share this now':'compartilhe agora','the world must see':'o mundo precisa ver',
-      'watch till the end – this healing will shock you':'assista até o fim – esta cura vai chocar você','doctors can\'t explain what just happened':'médicos não podem explicar o que aconteceu','sickness gone in seconds – watch this now':'doença desapareceu em segundos – assista agora','the pain left instantly — you must see this':'a dor sumiu instantaneamente – você precisa ver','they said it was impossible... then god stepped in':'disseram que era impossível... então deus interveio','demons manifested and fled – caught on camera':'demônios se manifestaram e fugiram – filmado','deliverance power shook the whole room':'poder de libertação sacudiu toda a sala','witchcraft destroyed in seconds – watch':'feitiçaria destruída em segundos – assista','the spirit screamed and left – unbelievable':'o espírito gritou e saiu – inacreditável','the dead raised – this is not a movie':'os mortos ressuscitaram – isso não é um filme','from death to life – witness this miracle':'da morte para a vida – testemunhe este milagre','god revealed what no one knew – watch':'deus revelou o que ninguém sabia – assista','the seer spoke and it happened immediately':'o vidente falou e aconteceu imediatamente','heaven invaded this place – you can feel it':'o céu invadiu este lugar – você pode sentir','the glory cloud appeared – watch till end':'a nuvem de glória apareceu – assista até o fim','what just happened?! watch this now':'o que aconteceu?! assista agora','you won\'t believe what happens next':'você não vai acreditar no que acontece depois','the power of god hit and everything changed':'o poder de deus atingiu e tudo mudou','this miracle is trending worldwide':'este milagre é tendência mundial','stop scrolling — this will bless you':'pare de rolar – isso vai te abençoar','millions are watching this miracle':'milhões estão assistindo este milagre',
-      'woman':'mulher','man':'homem','child':'criança','with':'com','stage':'estágio','cancer':'câncer','healed':'curado','instantly':'instantaneamente','during':'durante','prayer':'oração','line':'linha','service':'culto','worship':'adoração','church':'igreja','years':'anos','deaf':'surdo','blind':'cego','sick':'doente','disease':'doença','pain':'dor','tumor':'tumor','dead':'morto','death':'morte','delivered':'liberto','demon':'demônio','demons':'demônios','spirit':'espírito','witchcraft':'feitiçaria','freedom':'liberdade','prophecy':'profecia','prophetic':'profético','seer':'vidente','vision':'visão','miracle':'milagre','supernatural':'sobrenatural','power':'poder','glory':'glória','jesus':'jesus','god':'deus','holy spirit':'espírito santo','heaven':'céu','faith':'fé','testimony':'testemunho','like':'curta','share':'compartilhe','comment':'comente','follow':'siga','believe':'acredite','receive':'receba','thank you':'obrigado','save':'salve','type':'digite','real':'real','viral':'viral','global':'global'
-    },
-    de:{
-      'raised from the dead':'von den toten auferweckt','death defeated':'tod besiegt','back to life':'zurück ins leben','resurrection glory':'auferstehungsherrlichkeit','healed & delivered':'geheilt und befreit','double miracle':'doppeltes wunder','freedom & healing':'freiheit und heilung','instant healing':'sofortige heilung','healed by jesus':'von jesus geheilt','sickness destroyed':'krankheit zerstört','doctors speechless':'ärzte sprachlos','demons cast out':'dämonen ausgetrieben','set free':'befreit','deliverance power':'befreiungskraft','witchcraft destroyed':'hexerei zerstört','prophetic word':'prophetisches wort','god revealed it':'gott hat es offenbart','seer anointing':'sehersalbung','powerful miracle':'mächtiges wunder','signs & wonders':'zeichen und wunder','god did it':'gott hat es getan','glory of god':'herrlichkeit gottes','heaven invaded':'der himmel brach herein','worship breakthrough':'anbetungsdurchbruch','god moved':'gott bewegte sich','must watch':'unbedingt ansehen','power of god':'kraft gottes','don\'t scroll':'nicht scrollen','this is real':'das ist echt','global revival':'globale erweckung','trending now':'jetzt im trend','viral miracle':'virales wunder','god is moving':'gott bewegt sich','millions watching':'millionen schauen zu','share this now':'jetzt teilen','the world must see':'die welt muss es sehen',
-      'watch till the end – this healing will shock you':'bis zum ende schauen – diese heilung wird dich schockieren','doctors can\'t explain what just happened':'ärzte können nicht erklären, was gerade passiert ist','sickness gone in seconds – watch this now':'krankheit in sekunden verschwunden – jetzt ansehen','the pain left instantly — you must see this':'der schmerz verschwand sofort – das musst du sehen','they said it was impossible... then god stepped in':'sie sagten, es sei unmöglich... dann griff gott ein','demons manifested and fled – caught on camera':'dämonen manifestierten sich und flohen – vor der kamera','deliverance power shook the whole room':'befreiungskraft erschütterte den ganzen raum','witchcraft destroyed in seconds – watch':'hexerei in sekunden zerstört – sieh es dir an','the spirit screamed and left – unbelievable':'der geist schrie und ging – unglaublich','the dead raised – this is not a movie':'die toten auferweckt – das ist kein film','from death to life – witness this miracle':'vom tod zum leben – erlebe dieses wunder','god revealed what no one knew – watch':'gott offenbarte, was niemand wusste – sieh es dir an','the seer spoke and it happened immediately':'der seher sprach und es geschah sofort','heaven invaded this place – you can feel it':'der himmel brach hier ein – du kannst es fühlen','the glory cloud appeared – watch till end':'die herrlichkeitswolke erschien – bis zum ende schauen','what just happened?! watch this now':'was ist gerade passiert?! jetzt ansehen','you won\'t believe what happens next':'du wirst nicht glauben, was als nächstes passiert','the power of god hit and everything changed':'die kraft gottes traf ein und alles veränderte sich','this miracle is trending worldwide':'dieses wunder ist weltweit im trend','stop scrolling — this will bless you':'hör auf zu scrollen – das wird dich segnen','millions are watching this miracle':'millionen sehen dieses wunder',
-      'woman':'frau','man':'mann','child':'kind','with':'mit','stage':'stadium','cancer':'krebs','healed':'geheilt','instantly':'sofort','during':'während','prayer':'gebet','line':'reihe','service':'gottesdienst','worship':'anbetung','church':'kirche','years':'jahre','deaf':'taub','blind':'blind','sick':'krank','disease':'krankheit','pain':'schmerz','tumor':'tumor','dead':'tot','death':'tod','delivered':'befreit','demon':'dämon','demons':'dämonen','spirit':'geist','witchcraft':'hexerei','freedom':'freiheit','prophecy':'prophetie','prophetic':'prophetisch','seer':'seher','vision':'vision','miracle':'wunder','supernatural':'übernatürlich','power':'kraft','glory':'herrlichkeit','jesus':'jesus','god':'gott','holy spirit':'heiliger geist','heaven':'himmel','faith':'glaube','testimony':'zeugnis','like':'gefällt mir','share':'teilen','comment':'kommentieren','follow':'folgen','believe':'glaube','receive':'empfange','thank you':'danke','save':'speichern','type':'tippe','real':'echt','viral':'viral','global':'global'
-    },
-    ru:{
-      'raised from the dead':'воскрешен из мертвых','death defeated':'смерть побеждена','back to life':'вернулся к жизни','resurrection glory':'слава воскресения','healed & delivered':'исцелен и освобожден','double miracle':'двойное чудо','freedom & healing':'свобода и исцеление','instant healing':'мгновенное исцеление','healed by jesus':'исцелен иисусом','sickness destroyed':'болезнь уничтожена','doctors speechless':'врачи безмолвны','demons cast out':'демоны изгнаны','set free':'освобожден','deliverance power':'сила освобождения','witchcraft destroyed':'колдовство уничтожено','prophetic word':'пророческое слово','god revealed it':'бог открыл это','seer anointing':'помазание провидца','powerful miracle':'мощное чудо','signs & wonders':'знамения и чудеса','god did it':'бог сделал это','glory of god':'слава божья','heaven invaded':'небеса вторглись','worship breakthrough':'прорыв в поклонении','god moved':'бог двигался','must watch':'обязательно смотреть','power of god':'сила божья','don\'t scroll':'не листай','this is real':'это реально','global revival':'глобальное пробуждение','trending now':'в тренде','viral miracle':'вирусное чудо','god is moving':'бог движется','millions watching':'миллионы смотрят','share this now':'поделись сейчас','the world must see':'мир должен увидеть',
-      'watch till the end – this healing will shock you':'смотри до конца – это исцеление шокирует тебя','doctors can\'t explain what just happened':'врачи не могут объяснить, что сейчас произошло','sickness gone in seconds – watch this now':'болезнь исчезла за секунды – смотри сейчас','the pain left instantly — you must see this':'боль ушла мгновенно – ты должен это увидеть','they said it was impossible... then god stepped in':'они сказали, что это невозможно... потом вмешался бог','demons manifested and fled – caught on camera':'демоны проявились и бежали – снято на камеру','deliverance power shook the whole room':'сила освобождения потрясла всю комнату','witchcraft destroyed in seconds – watch':'колдовство уничтожено за секунды – смотри','the spirit screamed and left – unbelievable':'дух закричал и ушел – невероятно','the dead raised – this is not a movie':'мертвые воскрешены – это не кино','from death to life – witness this miracle':'от смерти к жизни – стань свидетелем чуда','god revealed what no one knew – watch':'бог открыл то, чего никто не знал – смотри','the seer spoke and it happened immediately':'провидец сказал, и это произошло немедленно','heaven invaded this place – you can feel it':'небеса вторглись в это место – ты чувствуешь','the glory cloud appeared – watch till end':'облако славы появилось – смотри до конца','what just happened?! watch this now':'что сейчас произошло?! смотри сейчас','you won\'t believe what happens next':'ты не поверишь, что будет дальше','the power of god hit and everything changed':'сила божья ударила, и всё изменилось','this miracle is trending worldwide':'это чудо в мировом тренде','stop scrolling — this will bless you':'хватит листать – это благословит тебя','millions are watching this miracle':'миллионы смотрят это чудо',
-      'woman':'женщина','man':'мужчина','child':'ребенок','with':'с','stage':'стадия','cancer':'рак','healed':'исцелен','instantly':'мгновенно','during':'во время','prayer':'молитва','line':'линия','service':'служение','worship':'поклонение','church':'церковь','years':'лет','deaf':'глухой','blind':'слепой','sick':'больной','disease':'болезнь','pain':'боль','tumor':'опухоль','dead':'мертвый','death':'смерть','delivered':'освобожден','demon':'демон','demons':'демоны','spirit':'дух','witchcraft':'колдовство','freedom':'свобода','prophecy':'пророчество','prophetic':'пророческий','seer':'провидец','vision':'видение','miracle':'чудо','supernatural':'сверхъестественный','power':'сила','glory':'слава','jesus':'иисус','god':'бог','holy spirit':'святой дух','heaven':'небеса','faith':'вера','testimony':'свидетельство','like':'лайк','share':'поделись','comment':'комментарий','follow':'подпишись','believe':'верь','receive':'прими','thank you':'спасибо','save':'сохрани','type':'напиши','real':'реальный','viral':'вирусный','global':'глобальный'
-    },
-    ha:{
-      'raised from the dead':'tashi daga matattu','death defeated':'mutuwa ta ci nasara','back to life':'koma rayuwa','resurrection glory':'daukan tashin matattu','healed & delivered':'warke da tsira','double miracle':'mu\'ujiza biyu','freedom & healing':'yanci da warkewa','instant healing':'warke nan take','healed by jesus':'yesu ya warke','sickness destroyed':'cuta ta lalace','doctors speechless':'likitoci sun kasa magana','demons cast out':'aljannu an kora','set free':'an saki','deliverance power':'ikon tsira','witchcraft destroyed':'sihiri ya lalace','prophetic word':'maganar annabci','god revealed it':'allah ya bayyana','seer anointing':'shafewar mai gani','powerful miracle':'mu\'ujiza mai karfi','signs & wonders':'alamomi da abubuwan ban mamaki','god did it':'allah ya yi','glory of god':'daukan allah','heaven invaded':'sama ta mamaye','worship breakthrough':'nasara ta bauta','god moved':'allah ya matsa','must watch':'dole a kalla','power of god':'ikon allah','don\'t scroll':'kada a gungura','this is real':'wannan gaskiya ne','global revival':'farkawa ta duniya','trending now':'abun da ke faruwa','viral miracle':'mu\'ujiza mai yaduwa','god is moving':'allah yana motsawa','millions watching':'miliyoyi suna kallo','share this now':'raba wannan yanzu','the world must see':'duniya dole ta gani',
-      'watch till the end – this healing will shock you':'kalla har karshe – wannan warkewar zata girgiza ka','doctors can\'t explain what just happened':'likitoci ba za su iya bayyana abin da ya faru ba','sickness gone in seconds – watch this now':'cuta ta tafi cikin dakiku – kalli wannan yanzu','the pain left instantly — you must see this':'zafin ya tafi nan take – dole ka ga wannan','they said it was impossible... then god stepped in':'suka ce ba zai yiwu ba... sai allah ya shiga','demons manifested and fled – caught on camera':'aljannu sun bayyana suka gudu – an dauka a kamara','deliverance power shook the whole room':'ikon tsira ya girgiza dakin gaba daya','witchcraft destroyed in seconds – watch':'sihiri ya lalace cikin dakiku – kalla','the spirit screamed and left – unbelievable':'ruhun ya yi ihu ya tafi – abin mamaki','the dead raised – this is not a movie':'matattu sun tashi – wannan ba fim ba ne','from death to life – witness this miracle':'daga mutuwa zuwa rai – shaida wannan mu\'ujiza','god revealed what no one knew – watch':'allah ya bayyana abin da babu wanda ya sani – kalla','the seer spoke and it happened immediately':'mai gani ya yi magana kuma ya faru nan take','heaven invaded this place – you can feel it':'sama ta mamaye wannan wuri – kana iya ji','the glory cloud appeared – watch till end':'girgizar dauka ta bayyana – kalla har karshe','what just happened?! watch this now':'me ya faru yanzu?! kalli wannan yanzu','you won\'t believe what happens next':'ba za ka yarda da abin da zai faru ba','the power of god hit and everything changed':'ikon allah ya buga kuma komai ya canza','this miracle is trending worldwide':'wannan mu\'ujiza tana yaduwa a duniya','stop scrolling — this will bless you':'daina gungurawa – wannan zai albarkace ka','millions are watching this miracle':'miliyoyi suna kallon wannan mu\'ujiza',
-      'woman':'mace','man':'namiji','child':'yaro','with':'da','stage':'mataki','cancer':'cuta mai tsanani','healed':'warke','instantly':'nan take','during':'a lokacin','prayer':'addu\'a','line':'layi','service':'hidima','worship':'bauta','church':'coci','years':'shekaru','deaf':'kurma','blind':'makaho','sick':'mara lafiya','disease':'cuta','pain':'zafi','tumor':'kumburi','dead':'matacce','death':'mutuwa','delivered':'tsirarru','demon':'aljan','demons':'aljannu','spirit':'ruhu','witchcraft':'sihiri','freedom':'\'yanci','prophecy':'annabu','prophetic':'annabci','seer':'mai gani','vision':'wahayi','miracle':'mu\'ujiza','supernatural':'ikon allah','power':'iko','glory':'dauka','jesus':'yesu','god':'allah','holy spirit':'ruhu mai tsarki','heaven':'sama','faith':'imani','testimony':'shaida','like':'so','share':'raba','comment':'tsokaci','follow':'bi','believe':'yi imani','receive':'karba','thank you':'nagode','save':'ajiye','type':'rubuta','real':'gaskiya','viral':'mai yaduwa','global':'na duniya'
-    },
-    ig:{
-      'raised from the dead':'a kpọtụrụ n\'ọnwụ','death defeated':'e meriri ọnwụ','back to life':'laghachi na ndụ','resurrection glory':'ebube mbilite n\'ọnwụ','healed & delivered':'a gwọrọ ma napụta','double miracle':'ọrụ ebube abụọ','freedom & healing':'nnwere onwe na ọgwọ','instant healing':'ọgwọ ozigbo','healed by jesus':'jisọs gwọrọ','sickness destroyed':'ebibiela ọrịa','doctors speechless':'ndị dọkịta enweghị okwu','demons cast out':'a chụpụrụ ndị mmụọ ọjọọ','set free':'a tọhapụrụ','deliverance power':'ike nzọpụta','witchcraft destroyed':'ebibiela amosu','prophetic word':'okwu amụma','god revealed it':'chineke kpughere ya','seer anointing':'mmanụ onye ọhụụ','powerful miracle':'ọrụ ebube dị ike','signs & wonders':'akara na ọrụ ebube','god did it':'chineke mere ya','glory of god':'ebube chineke','heaven invaded':'elu-igwe wakpọrọ','worship breakthrough':'ọganihu ofufe','god moved':'chineke kwaghariiri','must watch':'a ga-elelerịrị','power of god':'ike chineke','don\'t scroll':'apịgharịla','this is real':'nke a bụ eziokwu','global revival':'ntute n\'ụwa niile','trending now':'na-ewu ewu ugbu a','viral miracle':'ọrụ ebube na-agbasa','god is moving':'chineke na-akwagharị','millions watching':'nde mmadụ na-ele','share this now':'kesaa nke a ugbu a','the world must see':'ụwa ga-ahụrịrị',
-      'watch till the end – this healing will shock you':'lee rue ọgwụgwụ – ọgwọ a ga-awụ gị akpataobi','doctors can\'t explain what just happened':'ndị dọkịta enweghị ike ịkọwa ihe merenụ','sickness gone in seconds – watch this now':'ọrịa apụọla n\'ime sekọnd – lee nke a ugbu a','the pain left instantly — you must see this':'ihe mgbu ahụ kwụsịrị ozigbo – ị ga-ahụrịrị nke a','they said it was impossible... then god stepped in':'ha sịrị na ọ gaghị ekwe omume... ma chineke batara','demons manifested and fled – caught on camera':'ndị mmụọ ọjọọ pụtara gbapụ – esere na kamera','deliverance power shook the whole room':'ike nzọpụta mere ka ụlọ niile maa jijiji','witchcraft destroyed in seconds – watch':'ebibiela amosu n\'ime sekọnd – lee','the spirit screamed and left – unbelievable':'mmụọ ahụ tiri mkpu pụọ – ihe ịtụnanya','the dead raised – this is not a movie':'onye nwụrụ anwụ bilitere – nke a abụghị ihe nkiri','from death to life – witness this miracle':'site n\'ọnwụ gaa na ndụ – gbaa akaebe maka ọrụ ebube a','god revealed what no one knew – watch':'chineke kpughere ihe onye ọ bụla na-amaghị – lee','the seer spoke and it happened immediately':'onye ọhụụ kwuru, o mezie ozigbo','heaven invaded this place – you can feel it':'elu-igwe wakpọrọ ebe a – ị nwere ike ịnụ ya','the glory cloud appeared – watch till end':'igwe ojii ebube pụtara – lee rue ọgwụgwụ','what just happened?! watch this now':'gịnị merenụ?! lee nke a ugbu a','you won\'t believe what happens next':'ị gaghị ekwere ihe ga-eme ọzọ','the power of god hit and everything changed':'ike chineke tụrụ, ihe niile gbanwee','this miracle is trending worldwide':'ọrụ ebube a na-agbasa n\'ụwa niile','stop scrolling — this will bless you':'kwụsị ịpịgharị – nke a ga-agọzi gị','millions are watching this miracle':'nde mmadụ na-ele ọrụ ebube a',
-      'woman':'nwaanyị','man':'nwoke','child':'nwata','with':'na','stage':'ọkwa','cancer':'ọrịa kansa','healed':'a gwọrọ','instantly':'ozigbo','during':'n\'oge','prayer':'ekpere','line':'ahịrị','service':'ozi','worship':'ofufe','church':'ụka','years':'afọ','deaf':'onye ogbi','blind':'onye ìsì','sick':'onye ọrịa','disease':'ọrịa','pain':'ihe mgbu','tumor':'ọzịza','dead':'nwụrụ anwụ','death':'ọnwụ','delivered':'a napụtara','demon':'mmụọ ọjọọ','demons':'ndị mmụọ ọjọọ','spirit':'mmụọ','witchcraft':'amosu','freedom':'nnwere onwe','prophecy':'amụma','prophetic':'nke amụma','seer':'onye ọhụụ','vision':'ọhụụ','miracle':'ọrụ ebube','supernatural':'ike karịrị nke mmadụ','power':'ike','glory':'ebube','jesus':'jisọs','god':'chineke','holy spirit':'mmụọ nsọ','heaven':'elu-igwe','faith':'okwukwe','testimony':'ịgba akaebe','like':'mmasị','share':'kesaa','comment':'kwuo','follow':'soro','believe':'kwere','receive':'nata','thank you':'daalụ','save':'dokwaa','type':'dee','real':'eziokwu','viral':'na-agbasa','global':'n\'ụwa niile'
-    },
-    yo:{
-      'raised from the dead':'ajinde lati oku','death defeated':'a ṣẹgun iku','back to life':'pada si aye','resurrection glory':'ogo ajinde','healed & delivered':'a mu wo san ati idande','double miracle':'iṣẹ iyanu meji','freedom & healing':'ominira ati iwosan','instant healing':'iwosan lesekese','healed by jesus':'jesu wo san','sickness destroyed':'arun ti parun','doctors speechless':'awon dokita ko le sọrọ','demons cast out':'a le awon emi buruku jade','set free':'ominira','deliverance power':'agbara idande','witchcraft destroyed':'ajẹ ti parun','prophetic word':'ọrọ asotele','god revealed it':'oloun fi han','seer anointing':'ororo ariran','powerful miracle':'iṣẹ iyanu alagbara','signs & wonders':'amii ati iṣẹ iyanu','god did it':'oloun ṣe e','glory of god':'ogo oloun','heaven invaded':'ọrun wọlu','worship breakthrough':'ilọsiwaju iyin','god moved':'oloun gbe','must watch':'o gbodo wo','power of god':'agbara oloun','don\'t scroll':'maṣe yi lọ','this is real':'eyi jẹ gidi','global revival':'isoji agbaye','trending now':'ti n tan kakiri','viral miracle':'iṣẹ iyanu ti n tan','god is moving':'oloun n gbe','millions watching':'awon miliọnu n wo','share this now':'pin eyi bayi','the world must see':'agbaye gbọdọ ri',
-      'watch till the end – this healing will shock you':'wo titi di opin – iwosan yii yoo ya ọ lẹnu','doctors can\'t explain what just happened':'awon dokita ko le ṣe alaye ohun to ṣẹlẹ','sickness gone in seconds – watch this now':'arun ti lo ni iṣẹju – wo eyi bayi','the pain left instantly — you must see this':'irora naa lo lesekese – o gbọdọ ri eyi','they said it was impossible... then god stepped in':'wọn ni ko ṣeeṣe... ṣugbọn oloun wọle','demons manifested and fled – caught on camera':'awon emi buruku farahan sa – a ya aworan','deliverance power shook the whole room':'agbara idande mi gbogbo yara naa','witchcraft destroyed in seconds – watch':'ajẹ ti parun ni iṣẹju – wo','the spirit screamed and left – unbelievable':'ẹmi naa kigbe o si lọ – iyalẹnu','the dead raised – this is not a movie':'oku jinde – eyi kii ṣe fiimu','from death to life – witness this miracle':'lati iku si aye – jẹri iṣẹ iyanu yii','god revealed what no one knew – watch':'oloun fi ohun ti ẹnikan ko mọ han – wo','the seer spoke and it happened immediately':'ariran sọrọ o si ṣẹlẹ lesekese','heaven invaded this place – you can feel it':'ọrun wọ ibi yii – o le nimọlara rẹ','the glory cloud appeared – watch till end':'awọsanma ogo farahan – wo titi de opin','what just happened?! watch this now':'kilo ṣẹlẹ?! wo eyi bayi','you won\'t believe what happens next':'o o ni gbagbọ ohun to ma ṣẹlẹ','the power of god hit and everything changed':'agbara oloun lu, gbogbo nkan yipada','this miracle is trending worldwide':'iṣẹ iyanu yii n tan kakiri agbaye','stop scrolling — this will bless you':'da lilọ kiri duro – eyi yoo bukun fun ọ','millions are watching this miracle':'awon miliọnu n wo iṣẹ iyanu yii',
-      'woman':'obinrin','man':'ọkunrin','child':'ọmọde','with':'pẹlu','stage':'ipele','cancer':'arun jejere','healed':'a mu wo san','instantly':'lesekese','during':'lakoko','prayer':'adura','line':'ila','service':'iṣe','worship':'iyin','church':'ile ijọsin','years':'ọdun','deaf':'adití','blind':'afọju','sick':'aisan','disease':'arun','pain':'irora','tumor':'eebu','dead':'oku','death':'iku','delivered':'a gba la','demon':'emi buruku','demons':'awon emi buruku','spirit':'ẹmi','witchcraft':'ajẹ','freedom':'ominira','prophecy':'asotele','prophetic':'asotele','seer':'ariran','vision':'iran','miracle':'iṣẹ iyanu','supernatural':'ti o ju ti ẹda lọ','power':'agbara','glory':'ogo','jesus':'jesu','god':'oloun','holy spirit':'ẹmi mimọ','heaven':'ọrun','faith':'igbagbọ','testimony':'ijẹrii','like':'fẹran','share':'pin','comment':'ọrọ','follow':'tẹle','believe':'gbagbọ','receive':'gba','thank you':'o ṣeun','save':'fipamọ','type':'kọ','real':'gidi','viral':'ti n tan kakiri','global':'agbaye'
-    }
-  };
+  document.querySelectorAll('#transLangButtons .lang-flag-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#transLangButtons .lang-flag-btn').forEach(function(x){x.classList.remove('active-lang')});b.classList.add('active-lang');transLang=b.dataset.lang;});});
 
   function translateText(tx,lang){
-    if(!tx||!dict[lang])return tx;
+    if(!tx||!lang)return tx;
+    var dicts={fr:{'raised from the dead':'ressuscité des morts','instant healing':'guérison instantanée','healed & delivered':'guéri et délivré','demons cast out':'démons chassés','set free':'libéré','deliverance power':'puissance de délivrance','witchcraft destroyed':'sorcellerie détruite','prophetic word':'parole prophétique','god revealed it':'dieu l\'a révélé','seer anointing':'onction de voyant','powerful miracle':'miracle puissant','signs & wonders':'signes et prodiges','god did it':'dieu l\'a fait','glory of god':'gloire de dieu','heaven invaded':'le ciel a envahi','god moved':'dieu a agi','must watch':'à voir absolument','power of god':'puissance de dieu','don\'t scroll':'ne faites pas défiler','this is real':'c\'est réel','global revival':'réveil mondial','viral miracle':'miracle viral','god is moving':'dieu agit','millions watching':'millions regardent','the world must see':'le monde doit voir','woman':'femme','man':'homme','boy':'garçon','girl':'fille','child':'enfant','son':'fils','daughter':'fille','baby':'bébé','elder':'ancien','pastor':'pasteur','prophet':'prophète','with':'avec','aged':'âgé de','stage':'stade','cancer':'cancer','tumour':'tumeur','healed':'guéri','healing':'guérison','instantly':'instantanément','during':'pendant','prayer':'prière','line':'ligne','service':'service','worship':'louange','church':'église','years':'ans','deaf':'sourd','blind':'aveugle','sick':'malade','disease':'maladie','pain':'douleur','dead':'mort','death':'mort','delivered':'délivré','demon':'démon','demons':'démons','spirit':'esprit','witchcraft':'sorcellerie','bondage':'esclavage','oppression':'oppression','cast out':'chassé','freedom':'liberté','prophecy':'prophétie','prophetic':'prophétique','seer':'voyant','vision':'vision','miracle':'miracle','supernatural':'surnaturel','power':'puissance','glory':'gloire','jesus':'jésus','god':'dieu','holy spirit':'saint-esprit','heaven':'ciel','faith':'foi','testimony':'témoignage','like':'aimez','share':'partagez','comment':'commentez','follow':'suivez','believe':'croyez','receive':'recevez','thank you':'merci','watching':'regarder','type':'tapez','save':'enregistrez','needs':'a besoin','love':'aimez','presence':'présence','more':'plus','content':'contenu','still':'encore','real':'réel','viral':'viral','global':'mondial','stricken':'frappé','spiritual attack':'attaque spirituelle','uncle':'oncle','land':'terre','father':'père','left':'laissé','hospital':'hôpital','said':'a dit','spinal cord':'moelle épinière','issues':'problèmes','completely':'complètement','paralysed':'paralysé','national hospital':'hôpital national','one':'un','two':'deux','three':'trois','four':'quatre','five':'cinq','six':'six','seven':'sept','eight':'huit','nine':'neuf','ten':'dix','eleven':'onze','twelve':'douze','thirteen':'treize','fourteen':'quatorze','fifteen':'quinze','sixteen':'seize','twenty':'vingt','thirty':'trente','forty':'quarante','fifty':'cinquante','hundred':'cent'},
+      es:{'raised from the dead':'resucitado de los muertos','instant healing':'sanidad instantánea','healed & delivered':'sanado y liberado','demons cast out':'demonios expulsados','set free':'liberado','deliverance power':'poder de liberación','witchcraft destroyed':'brujería destruida','prophetic word':'palabra profética','god revealed it':'dios lo reveló','seer anointing':'unción de vidente','powerful miracle':'milagro poderoso','signs & wonders':'señales y maravillas','god did it':'dios lo hizo','glory of god':'gloria de dios','heaven invaded':'el cielo invadió','god moved':'dios se movió','must watch':'debes verlo','power of god':'poder de dios','don\'t scroll':'no deslices','this is real':'esto es real','global revival':'avivamiento global','viral miracle':'milagro viral','god is moving':'dios se mueve','millions watching':'millones mirando','the world must see':'el mundo debe ver','woman':'mujer','man':'hombre','boy':'niño','girl':'niña','child':'niño','son':'hijo','daughter':'hija','baby':'bebé','elder':'anciano','pastor':'pastor','prophet':'profeta','with':'con','aged':'de','stage':'etapa','cancer':'cáncer','tumour':'tumor','healed':'sanado','healing':'sanidad','instantly':'al instante','during':'durante','prayer':'oración','line':'línea','service':'servicio','worship':'adoración','church':'iglesia','years':'años','deaf':'sordo','blind':'ciego','sick':'enfermo','disease':'enfermedad','pain':'dolor','dead':'muerto','death':'muerte','delivered':'liberado','demon':'demonio','demons':'demonios','spirit':'espíritu','witchcraft':'brujería','bondage':'esclavitud','oppression':'opresión','cast out':'expulsado','freedom':'libertad','prophecy':'profecía','prophetic':'profético','seer':'vidente','vision':'visión','miracle':'milagro','supernatural':'sobrenatural','power':'poder','glory':'gloria','jesus':'jesús','god':'dios','holy spirit':'espíritu santo','heaven':'cielo','faith':'fe','testimony':'testimonio','like':'me gusta','share':'comparte','comment':'comenta','follow':'sigue','believe':'cree','receive':'recibe','thank you':'gracias','watching':'viendo','type':'escribe','save':'guarda','needs':'necesita','love':'ama','presence':'presencia','more':'más','content':'contenido','still':'aún','real':'real','viral':'viral','global':'global','stricken':'afligido','spiritual attack':'ataque espiritual','uncle':'tío','land':'tierra','father':'padre','left':'dejó','hospital':'hospital','said':'dijo','spinal cord':'médula espinal','issues':'problemas','completely':'completamente','paralysed':'paralizado','national hospital':'hospital nacional','one':'uno','two':'dos','three':'tres','four':'cuatro','five':'cinco','six':'seis','seven':'siete','eight':'ocho','nine':'nueve','ten':'diez','eleven':'once','twelve':'doce','thirteen':'trece','fourteen':'catorce','fifteen':'quince','sixteen':'dieciséis','twenty':'veinte','thirty':'treinta','forty':'cuarenta','fifty':'cincuenta','hundred':'cien'},
+      pt:{'raised from the dead':'ressuscitado dos mortos','instant healing':'cura instantânea','healed & delivered':'curado e liberto','demons cast out':'demônios expulsos','set free':'liberto','deliverance power':'poder de libertação','witchcraft destroyed':'feitiçaria destruída','prophetic word':'palavra profética','god revealed it':'deus revelou','seer anointing':'unção de vidente','powerful miracle':'milagre poderoso','signs & wonders':'sinais e maravilhas','god did it':'deus fez','glory of god':'glória de deus','heaven invaded':'o céu invadiu','god moved':'deus se moveu','must watch':'precisa ver','power of god':'poder de deus','don\'t scroll':'não role','this is real':'isto é real','global revival':'avivamento global','viral miracle':'milagre viral','god is moving':'deus está se movendo','millions watching':'milhões assistindo','the world must see':'o mundo precisa ver','woman':'mulher','man':'homem','boy':'menino','girl':'menina','child':'criança','son':'filho','daughter':'filha','baby':'bebê','elder':'ancião','pastor':'pastor','prophet':'profeta','with':'com','aged':'de','stage':'estágio','cancer':'câncer','tumour':'tumor','healed':'curado','healing':'cura','instantly':'instantaneamente','during':'durante','prayer':'oração','line':'linha','service':'culto','worship':'adoração','church':'igreja','years':'anos','deaf':'surdo','blind':'cego','sick':'doente','disease':'doença','pain':'dor','dead':'morto','death':'morte','delivered':'liberto','demon':'demônio','demons':'demônios','spirit':'espírito','witchcraft':'feitiçaria','bondage':'escravidão','oppression':'opressão','cast out':'expulso','freedom':'liberdade','prophecy':'profecia','prophetic':'profético','seer':'vidente','vision':'visão','miracle':'milagre','supernatural':'sobrenatural','power':'poder','glory':'glória','jesus':'jesus','god':'deus','holy spirit':'espírito santo','heaven':'céu','faith':'fé','testimony':'testemunho','like':'curta','share':'compartilhe','comment':'comente','follow':'siga','believe':'acredite','receive':'receba','thank you':'obrigado','watching':'assistindo','type':'digite','save':'salve','needs':'precisa','love':'ama','presence':'presença','more':'mais','content':'conteúdo','still':'ainda','real':'real','viral':'viral','global':'global','stricken':'afligido','spiritual attack':'ataque espiritual','uncle':'tio','land':'terra','father':'pai','left':'deixou','hospital':'hospital','said':'disse','spinal cord':'medula espinhal','issues':'problemas','completely':'completamente','paralysed':'paralisado','national hospital':'hospital nacional','one':'um','two':'dois','three':'três','four':'quatro','five':'cinco','six':'seis','seven':'sete','eight':'oito','nine':'nove','ten':'dez','eleven':'onze','twelve':'doze','thirteen':'treze','fourteen':'catorze','fifteen':'quinze','sixteen':'dezesseis','twenty':'vinte','thirty':'trinta','forty':'quarenta','fifty':'cinquenta','hundred':'cem'},
+      de:{'raised from the dead':'von den toten auferweckt','instant healing':'sofortige heilung','healed & delivered':'geheilt und befreit','demons cast out':'dämonen ausgetrieben','set free':'befreit','deliverance power':'befreiungskraft','witchcraft destroyed':'hexerei zerstört','prophetic word':'prophetisches wort','god revealed it':'gott hat es offenbart','seer anointing':'sehersalbung','powerful miracle':'mächtiges wunder','signs & wonders':'zeichen und wunder','god did it':'gott hat es getan','glory of god':'herrlichkeit gottes','heaven invaded':'der himmel brach herein','god moved':'gott bewegte sich','must watch':'unbedingt ansehen','power of god':'kraft gottes','don\'t scroll':'nicht scrollen','this is real':'das ist echt','global revival':'globale erweckung','viral miracle':'virales wunder','god is moving':'gott bewegt sich','millions watching':'millionen schauen zu','the world must see':'die welt muss es sehen','woman':'frau','man':'mann','boy':'junge','girl':'mädchen','child':'kind','son':'sohn','daughter':'tochter','baby':'baby','elder':'ältester','pastor':'pastor','prophet':'prophet','with':'mit','aged':'im alter von','stage':'stadium','cancer':'krebs','tumour':'tumor','healed':'geheilt','healing':'heilung','instantly':'sofort','during':'während','prayer':'gebet','line':'reihe','service':'gottesdienst','worship':'anbetung','church':'kirche','years':'jahre','deaf':'taub','blind':'blind','sick':'krank','disease':'krankheit','pain':'schmerz','dead':'tot','death':'tod','delivered':'befreit','demon':'dämon','demons':'dämonen','spirit':'geist','witchcraft':'hexerei','bondage':'knechtschaft','oppression':'unterdrückung','cast out':'ausgetrieben','freedom':'freiheit','prophecy':'prophetie','prophetic':'prophetisch','seer':'seher','vision':'vision','miracle':'wunder','supernatural':'übernatürlich','power':'kraft','glory':'herrlichkeit','jesus':'jesus','god':'gott','holy spirit':'heiliger geist','heaven':'himmel','faith':'glaube','testimony':'zeugnis','like':'gefällt mir','share':'teilen','comment':'kommentieren','follow':'folgen','believe':'glaube','receive':'empfange','thank you':'danke','watching':'zuschauen','type':'tippe','save':'speichern','needs':'braucht','love':'liebe','presence':'gegenwart','more':'mehr','content':'inhalt','still':'noch','real':'echt','viral':'viral','global':'global','stricken':'geschlagen','spiritual attack':'spiritueller angriff','uncle':'onkel','land':'land','father':'vater','left':'hinterließ','hospital':'krankenhaus','said':'sagte','spinal cord':'rückenmark','issues':'probleme','completely':'vollständig','paralysed':'gelähmt','national hospital':'nationales krankenhaus','one':'eins','two':'zwei','three':'drei','four':'vier','five':'fünf','six':'sechs','seven':'sieben','eight':'acht','nine':'neun','ten':'zehn','eleven':'elf','twelve':'zwölf','thirteen':'dreizehn','fourteen':'vierzehn','fifteen':'fünfzehn','sixteen':'sechzehn','twenty':'zwanzig','thirty':'dreißig','forty':'vierzig','fifty':'fünfzig','hundred':'hundert'},
+      ru:{'raised from the dead':'воскрешен из мертвых','instant healing':'мгновенное исцеление','healed & delivered':'исцелен и освобожден','demons cast out':'демоны изгнаны','set free':'освобожден','deliverance power':'сила освобождения','witchcraft destroyed':'колдовство уничтожено','prophetic word':'пророческое слово','god revealed it':'бог открыл','seer anointing':'помазание провидца','powerful miracle':'мощное чудо','signs & wonders':'знамения и чудеса','god did it':'бог сделал','glory of god':'слава божья','heaven invaded':'небеса вторглись','god moved':'бог двигался','must watch':'смотреть','power of god':'сила божья','don\'t scroll':'не листай','this is real':'это реально','global revival':'глобальное пробуждение','viral miracle':'вирусное чудо','god is moving':'бог движется','millions watching':'миллионы смотрят','the world must see':'мир должен увидеть','woman':'женщина','man':'мужчина','boy':'мальчик','girl':'девочка','child':'ребенок','son':'сын','daughter':'дочь','baby':'ребенок','elder':'старейшина','pastor':'пастор','prophet':'пророк','with':'с','aged':'в возрасте','stage':'стадия','cancer':'рак','tumour':'опухоль','healed':'исцелен','healing':'исцеление','instantly':'мгновенно','during':'во время','prayer':'молитва','line':'линия','service':'служение','worship':'поклонение','church':'церковь','years':'лет','deaf':'глухой','blind':'слепой','sick':'больной','disease':'болезнь','pain':'боль','dead':'мертвый','death':'смерть','delivered':'освобожден','demon':'демон','demons':'демоны','spirit':'дух','witchcraft':'колдовство','bondage':'рабство','oppression':'угнетение','cast out':'изгнан','freedom':'свобода','prophecy':'пророчество','prophetic':'пророческий','seer':'провидец','vision':'видение','miracle':'чудо','supernatural':'сверхъестественный','power':'сила','glory':'слава','jesus':'иисус','god':'бог','holy spirit':'святой дух','heaven':'небеса','faith':'вера','testimony':'свидетельство','like':'лайк','share':'поделиться','comment':'комментарий','follow':'подписаться','believe':'верь','receive':'прими','thank you':'спасибо','watching':'просмотр','type':'напиши','save':'сохрани','needs':'нуждается','love':'любишь','presence':'присутствие','more':'больше','content':'контент','still':'ещё','real':'реальный','viral':'вирусный','global':'глобальный','stricken':'поражен','spiritual attack':'духовная атака','uncle':'дядя','land':'земля','father':'отец','left':'оставил','hospital':'больница','said':'сказал','spinal cord':'спинной мозг','issues':'проблемы','completely':'полностью','paralysed':'парализован','national hospital':'национальная больница','one':'один','two':'два','three':'три','four':'четыре','five':'пять','six':'шесть','seven':'семь','eight':'восемь','nine':'девять','ten':'десять','eleven':'одиннадцать','twelve':'двенадцать','thirteen':'тринадцать','fourteen':'четырнадцать','fifteen':'пятнадцать','sixteen':'шестнадцать','twenty':'двадцать','thirty':'тридцать','forty':'сорок','fifty':'пятьдесят','hundred':'сто'},
+      ha:{'raised from the dead':'tashi daga matattu','instant healing':'warke nan take','healed & delivered':'warke da tsira','demons cast out':'aljannu an kora','set free':'an saki','deliverance power':'ikon tsira','witchcraft destroyed':'sihiri ya lalace','prophetic word':'maganar annabci','god revealed it':'allah ya bayyana','seer anointing':'shafewar mai gani','powerful miracle':'mu\'ujiza mai karfi','signs & wonders':'alamomi da abubuwan ban mamaki','god did it':'allah ya yi','glory of god':'daukan allah','heaven invaded':'sama ta mamaye','god moved':'allah ya matsa','must watch':'dole a kalla','power of god':'ikon allah','don\'t scroll':'kada a gungura','this is real':'wannan gaskiya ne','global revival':'farkawa ta duniya','viral miracle':'mu\'ujiza mai yaduwa','god is moving':'allah yana motsawa','millions watching':'miliyoyi suna kallo','the world must see':'duniya dole ta gani','woman':'mace','man':'namiji','boy':'yaro','girl':'yarinya','child':'yaro','son':'da','daughter':'diya','baby':'jariri','elder':'dattijo','pastor':'fasto','prophet':'annabi','with':'da','aged':'mai shekaru','stage':'mataki','cancer':'cuta mai tsanani','tumour':'kumburi','healed':'warke','healing':'warkewa','instantly':'nan take','during':'a lokacin','prayer':'addu\'a','line':'layi','service':'hidima','worship':'bauta','church':'coci','years':'shekaru','deaf':'kurma','blind':'makaho','sick':'mara lafiya','disease':'cuta','pain':'zafi','dead':'matacce','death':'mutuwa','delivered':'tsirarru','demon':'aljan','demons':'aljannu','spirit':'ruhu','witchcraft':'sihiri','bondage':'bauta','oppression':'zalunci','cast out':'kora','freedom':'\'yanci','prophecy':'annabu','prophetic':'annabci','seer':'mai gani','vision':'wahayi','miracle':'mu\'ujiza','supernatural':'ikon allah','power':'iko','glory':'dauka','jesus':'yesu','god':'allah','holy spirit':'ruhu mai tsarki','heaven':'sama','faith':'imani','testimony':'shaida','like':'so','share':'raba','comment':'tsokaci','follow':'bi','believe':'yi imani','receive':'karba','thank you':'nagode','watching':'kallo','type':'rubuta','save':'ajiye','needs':'yana bukata','love':'so','presence':'gaban','more':'karin','content':'abun ciki','still':'har yanzu','real':'gaskiya','viral':'mai yaduwa','global':'na duniya','stricken':'bugu','spiritual attack':'harin ruhaniya','uncle':'kawu','land':'ƙasa','father':'uba','left':'ya bar','hospital':'asibiti','said':'ya ce','spinal cord':'lakar kashin baya','issues':'matsaloli','completely':'gaba daya','paralysed':'shanyayye','national hospital':'asibitin kasa','one':'daya','two':'biyu','three':'uku','four':'hudu','five':'biyar','six':'shida','seven':'bakwai','eight':'takwas','nine':'tara','ten':'goma','eleven':'goma sha daya','twelve':'goma sha biyu','thirteen':'goma sha uku','fourteen':'goma sha hudu','fifteen':'goma sha biyar','sixteen':'goma sha shida','twenty':'ashirin','thirty':'talatin','forty':'arba\'in','fifty':'hamsin','hundred':'dari'},
+      ig:{'raised from the dead':'a kpọtụrụ n\'ọnwụ','instant healing':'ọgwọ ozigbo','healed & delivered':'a gwọrọ ma napụta','demons cast out':'a chụpụrụ ndị mmụọ ọjọọ','set free':'a tọhapụrụ','deliverance power':'ike nzọpụta','witchcraft destroyed':'ebibiela amosu','prophetic word':'okwu amụma','god revealed it':'chineke kpughere ya','seer anointing':'mmanụ onye ọhụụ','powerful miracle':'ọrụ ebube dị ike','signs & wonders':'akara na ọrụ ebube','god did it':'chineke mere ya','glory of god':'ebube chineke','heaven invaded':'elu-igwe wakpọrọ','god moved':'chineke kwaghariiri','must watch':'a ga-elelerịrị','power of god':'ike chineke','don\'t scroll':'apịgharịla','this is real':'nke a bụ eziokwu','global revival':'ntute n\'ụwa niile','viral miracle':'ọrụ ebube na-agbasa','god is moving':'chineke na-akwagharị','millions watching':'nde mmadụ na-ele','the world must see':'ụwa ga-ahụrịrị','woman':'nwaanyị','man':'nwoke','boy':'nwata nwoke','girl':'nwata nwaanyị','child':'nwata','son':'nwa nwoke','daughter':'nwa nwaanyị','baby':'nwa ọhụrụ','elder':'okenye','pastor':'pastor','prophet':'onye amụma','with':'na','aged':'dị afọ','stage':'ọkwa','cancer':'ọrịa kansa','tumour':'ọzịza','healed':'a gwọrọ','healing':'ọgwọ','instantly':'ozigbo','during':'n\'oge','prayer':'ekpere','line':'ahịrị','service':'ozi','worship':'ofufe','church':'ụka','years':'afọ','deaf':'onye ogbi','blind':'onye ìsì','sick':'onye ọrịa','disease':'ọrịa','pain':'ihe mgbu','dead':'nwụrụ anwụ','death':'ọnwụ','delivered':'a napụtara','demon':'mmụọ ọjọọ','demons':'ndị mmụọ ọjọọ','spirit':'mmụọ','witchcraft':'amosu','bondage':'ohu','oppression':'mmegbu','cast out':'chụpụ','freedom':'nnwere onwe','prophecy':'amụma','prophetic':'nke amụma','seer':'onye ọhụụ','vision':'ọhụụ','miracle':'ọrụ ebube','supernatural':'ike karịrị nke mmadụ','power':'ike','glory':'ebube','jesus':'jisọs','god':'chineke','holy spirit':'mmụọ nsọ','heaven':'elu-igwe','faith':'okwukwe','testimony':'ịgba akaebe','like':'mmasị','share':'kesaa','comment':'kwuo','follow':'soro','believe':'kwere','receive':'nata','thank you':'daalụ','watching':'ilele','type':'dee','save':'dokwaa','needs':'chọrọ','love':'hụrụ n\'anya','presence':'ọnụnọ','more':'ọzọ','content':'ọdịnaya','still':'ka','real':'eziokwu','viral':'na-agbasa','global':'n\'ụwa niile','stricken':'e tigburu','spiritual attack':'mwakpo ime mmụọ','uncle':'nwanne nna','land':'ala','father':'nna','left':'hapụrụ','hospital':'ụlọ ọgwụ','said':'kwuru','spinal cord':'eriri afọ azụ','issues':'nsogbu','completely':'kpamkpam','paralysed':'ahụ kpọnwụrụ','national hospital':'ụlọ ọgwụ mba','one':'otu','two':'abụọ','three':'atọ','four':'anọ','five':'ise','six':'isii','seven':'asaa','eight':'asatọ','nine':'itoolu','ten':'iri','eleven':'iri na otu','twelve':'iri na abụọ','thirteen':'iri na atọ','fourteen':'iri na anọ','fifteen':'iri na ise','sixteen':'iri na isii','twenty':'iri abụọ','thirty':'iri atọ','forty':'iri anọ','fifty':'iri ise','hundred':'nari'},
+      yo:{'raised from the dead':'ajinde lati oku','instant healing':'iwosan lesekese','healed & delivered':'a mu wo san ati idande','demons cast out':'a le awon emi buruku jade','set free':'ominira','deliverance power':'agbara idande','witchcraft destroyed':'ajẹ ti parun','prophetic word':'ọrọ asotele','god revealed it':'oloun fi han','seer anointing':'ororo ariran','powerful miracle':'iṣẹ iyanu alagbara','signs & wonders':'amii ati iṣẹ iyanu','god did it':'oloun ṣe e','glory of god':'ogo oloun','heaven invaded':'ọrun wọlu','god moved':'oloun gbe','must watch':'o gbodo wo','power of god':'agbara oloun','don\'t scroll':'maṣe yi lọ','this is real':'eyi jẹ gidi','global revival':'isoji agbaye','viral miracle':'iṣẹ iyanu ti n tan','god is moving':'oloun n gbe','millions watching':'awon miliọnu n wo','the world must see':'agbaye gbọdọ ri','woman':'obinrin','man':'ọkunrin','boy':'ọmọkunrin','girl':'ọmọbinrin','child':'ọmọde','son':'ọmọkunrin','daughter':'ọmọbinrin','baby':'ọmọ kekere','elder':'agba','pastor':'aguntan','prophet':'woli','with':'pẹlu','aged':'ti ọjọ ori','stage':'ipele','cancer':'arun jejere','tumour':'eebu','healed':'a mu wo san','healing':'iwosan','instantly':'lesekese','during':'lakoko','prayer':'adura','line':'ila','service':'iṣe','worship':'iyin','church':'ile ijọsin','years':'ọdun','deaf':'adití','blind':'afọju','sick':'aisan','disease':'arun','pain':'irora','dead':'oku','death':'iku','delivered':'a gba la','demon':'emi buruku','demons':'awon emi buruku','spirit':'ẹmi','witchcraft':'ajẹ','bondage':'ẹrú','oppression':'ilokulo','cast out':'le jade','freedom':'ominira','prophecy':'asotele','prophetic':'asotele','seer':'ariran','vision':'iran','miracle':'iṣẹ iyanu','supernatural':'ti o ju ti ẹda lọ','power':'agbara','glory':'ogo','jesus':'jesu','god':'oloun','holy spirit':'ẹmi mimọ','heaven':'ọrun','faith':'igbagbọ','testimony':'ijẹrii','like':'fẹran','share':'pin','comment':'ọrọ','follow':'tẹle','believe':'gbagbọ','receive':'gba','thank you':'o ṣeun','watching':'wiwo','type':'kọ','save':'fipamọ','needs':'nilo','love':'nifẹ','presence':'wiwa','more':'diẹ sii','content':'akọle','still':'ṣi','real':'gidi','viral':'ti n tan kakiri','global':'agbaye','stricken':'ti kọlu','spiritual attack':'ikọlu ẹmi','uncle':'aburo baba','land':'ilẹ','father':'baba','left':'fi silẹ','hospital':'ile iwosan','said':'wi','spinal cord':'ọpá ẹhin','issues':'awon iṣoro','completely':'patapata','paralysed':'ti ro','national hospital':'ile iwosan orilẹ-ede','one':'ọkan','two':'meji','three':'mẹta','four':'mẹrin','five':'marun','six':'mẹfa','seven':'meje','eight':'mẹjọ','nine':'mẹsan','ten':'mẹwa','eleven':'mọkanla','twelve':'mejila','thirteen':'mẹtala','fourteen':'mẹrinla','fifteen':'marundinlogun','sixteen':'mẹrindinlogun','twenty':'ogun','thirty':'ọgbọn','forty':'ogoji','fifty':'aadọta','hundred':'ọgọrun'}};
+    var d=dicts[lang];
+    if(!d)return tx;
     var result=' '+tx+' ';
-    var d=dict[lang];
     var keys=Object.keys(d).sort(function(a,b){return b.length-a.length});
-    keys.forEach(function(k){
-      var esc=k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-      var re=new RegExp('\\b'+esc+'\\b','gi');
-      result=result.replace(re,function(m){
-        var tr=d[k];
-        if(m===m.toUpperCase()&&m.length>2)return tr.toUpperCase();
-        if(m[0]===m[0].toUpperCase())return tr.charAt(0).toUpperCase()+tr.slice(1);
-        return tr;
-      });
-    });
+    keys.forEach(function(k){var esc=k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');var re=new RegExp('\\b'+esc+'\\b','gi');result=result.replace(re,function(m){var tr=d[k];if(m===m.toUpperCase()&&m.length>2)return tr.toUpperCase();if(m[0]===m[0].toUpperCase())return tr.charAt(0).toUpperCase()+tr.slice(1);return tr;});});
     return result.trim();
   }
 
   document.getElementById('translateBtn').addEventListener('click',function(){
-    if(!generatedContent.title&&!generatedContent.caption)return alert('⚠️ Generate content in Tab 1 first, then come here to translate.');
+    if(!generatedContent.title&&!generatedContent.caption)return alert('⚠️ Generate content in Tab 1 first.');
     var lang=transLang;
-    var tT=translateText(generatedContent.title,lang);
-    var tH=translateText(generatedContent.hook,lang);
-    var tC=translateText(generatedContent.caption,lang);
-    var tHT=translateText(generatedContent.hashtags,lang);
-    var tCTA=translateText(generatedContent.cta,lang);
+    var tT=translateText(generatedContent.title,lang),tH=translateText(generatedContent.hook,lang),tC=translateText(generatedContent.caption,lang),tHT=translateText(generatedContent.hashtags,lang),tCTA=translateText(generatedContent.cta,lang);
     if(tT){document.getElementById('transTitle').textContent=tT;document.getElementById('transTitleBlock').style.display='block';window._tT=tT}else{document.getElementById('transTitleBlock').style.display='none'}
     if(tH){document.getElementById('transHook').textContent=tH;document.getElementById('transHookBlock').style.display='block';window._tH=tH}else{document.getElementById('transHookBlock').style.display='none'}
     if(tC){document.getElementById('transCaption').textContent=tC;document.getElementById('transCaptionBlock').style.display='block';window._tC=tC}else{document.getElementById('transCaptionBlock').style.display='none'}
@@ -444,7 +441,6 @@
     if(tCTA){document.getElementById('transCTA').textContent=tCTA;document.getElementById('transCTABlock').style.display='block';window._tCTA=tCTA}else{document.getElementById('transCTABlock').style.display='none'}
     document.getElementById('translateResult').style.display='block';
   });
-
   document.getElementById('copyTransTitle').addEventListener('click',function(){if(window._tT)copyText(window._tT,document.getElementById('copyTransTitle'))});
   document.getElementById('copyTransHook').addEventListener('click',function(){if(window._tH)copyText(window._tH,document.getElementById('copyTransHook'))});
   document.getElementById('copyTransCaption').addEventListener('click',function(){if(window._tC)copyText(window._tC,document.getElementById('copyTransCaption'))});
@@ -456,17 +452,16 @@
     var now=new Date(),tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
     var ch=now.getHours(),cm=now.getMinutes();
     var platform=document.getElementById('timingPlatform').value;
-    var windows={tiktok:[{s:18,e:21,l:'6:00 PM – 9:00 PM'},{s:11,e:13,l:'11:00 AM – 1:00 PM'}],youtube:[{s:12,e:15,l:'12:00 PM – 3:00 PM'},{s:18,e:21,l:'6:00 PM – 9:00 PM'}],instagram:[{s:19,e:21,l:'7:00 PM – 9:00 PM'},{s:12,e:14,l:'12:00 PM – 2:00 PM'}]};
-    var w=windows[platform]||windows.tiktok;
-    var bw=w[0],sw=w[1];
-    for(var i=0;i<w.length;i++){if(ch<w[i].s||(ch===w[i].s&&cm<30)){bw=w[i];sw=w[(i+1)%w.length];break}}
-    var nh=bw.s;if(nh<=ch)nh+=24;
-    var tm=(nh-ch)*60-cm;if(tm<0)tm+=24*60;
-    var dh=Math.floor(tm/60),dm=tm%60;
-    document.getElementById('bestTime').textContent=bw.l;
-    document.getElementById('timingReason').textContent='Based on your current time ('+now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:true})+') in '+tz+' — this window gives maximum views.';
-    document.getElementById('secondBest').textContent=sw.l;
-    document.getElementById('timingCountdown').textContent='⏰ Post in approximately '+dh+' hours and '+dm+' minutes for best results.';
+    var allWindows={tiktok:{am:{s:11,e:13,label:'11:00 AM – 1:00 PM',tag:'Late Morning'},pm:{s:18,e:21,label:'6:00 PM – 9:00 PM',tag:'Evening Peak'}},youtube:{am:{s:8,e:10,label:'8:00 AM – 10:00 AM',tag:'Morning Watch'},pm:{s:18,e:21,label:'6:00 PM – 9:00 PM',tag:'Prime Time'}},instagram:{am:{s:11,e:13,label:'11:00 AM – 1:00 PM',tag:'Lunch Break'},pm:{s:19,e:21,label:'7:00 PM – 9:00 PM',tag:'Post-Work'}}};
+    var w=allWindows[platform]||allWindows.tiktok;
+    document.getElementById('morningWindow').textContent=w.am.label;document.getElementById('morningTag').textContent=w.am.tag;
+    document.getElementById('eveningWindow').textContent=w.pm.label;document.getElementById('eveningTag').textContent=w.pm.tag;
+    var curMins=ch*60+cm,amS=w.am.s*60,pmS=w.pm.s*60,next,label,cd;
+    if(curMins<amS){next=w.am;label='MORNING';cd=amS-curMins}else if(curMins<pmS){next=w.pm;label='EVENING';cd=pmS-curMins}else{next=w.am;label='MORNING (Tomorrow)';cd=(24*60)-curMins+amS}
+    var dh=Math.floor(cd/60),dm=cd%60;
+    document.getElementById('timingReason').textContent='Based on your current time ('+now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:true})+') in '+tz+'.';
+    document.getElementById('timingRecommendation').textContent='✅ RECOMMENDED: Post during the '+label+' window — '+next.label;
+    document.getElementById('timingCountdown').textContent='⏰ Next window opens in approximately '+dh+' hours and '+dm+' minutes.';
     document.getElementById('timingResult').style.display='block';
   });
 
