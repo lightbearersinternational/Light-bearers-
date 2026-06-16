@@ -17,6 +17,7 @@
             --text: #F0EDE0;
             --card: rgba(15, 20, 35, 0.88);
             --danger: #E05555;
+            --warning: #F0A040;
         }
         * {
             margin: 0;
@@ -33,7 +34,7 @@
             padding: 0.75rem;
         }
         .main-card {
-            max-width: 840px;
+            max-width: 880px;
             width: 100%;
             background: var(--card);
             backdrop-filter: blur(30px);
@@ -628,6 +629,179 @@
             font-weight: 700;
             margin-left: 0.3rem;
         }
+
+        /* SCHEDULE & ALERT STYLES */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.5rem 0;
+            font-size: 0.7rem;
+        }
+        .schedule-table th {
+            background: var(--navy);
+            color: #F5D78C;
+            padding: 0.4rem 0.3rem;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .schedule-table td {
+            padding: 0.35rem 0.3rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #D5CFBA;
+        }
+        .schedule-table tr.today-row {
+            background: rgba(214, 176, 74, 0.15);
+            font-weight: 700;
+        }
+        .schedule-table tr.today-row td {
+            color: #F5D78C;
+        }
+        .schedule-table .day-name {
+            text-align: left;
+            font-weight: 600;
+            color: #E8E4D5;
+        }
+        .schedule-table .window-text {
+            font-size: 0.65rem;
+            color: #8A8A9A;
+        }
+        .alert-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            padding: 0.5rem 0.7rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 0.7rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .alert-toggle span {
+            font-size: 0.7rem;
+            color: #D5CFBA;
+            font-weight: 600;
+        }
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            background: #3a3a5a;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .toggle-switch.active {
+            background: var(--success);
+            border-color: var(--success);
+        }
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 16px;
+            height: 16px;
+            background: #FFF;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .toggle-switch.active::after {
+            left: 23px;
+        }
+        .next-up-box {
+            background: linear-gradient(135deg, rgba(214, 176, 74, 0.15), rgba(47, 66, 102, 0.3));
+            border: 1px solid rgba(214, 176, 74, 0.35);
+            border-radius: 0.9rem;
+            padding: 0.7rem 0.9rem;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+        .next-up-box .next-label {
+            font-size: 0.6rem;
+            color: #F5D78C;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 0.2rem;
+        }
+        .next-up-box .next-time {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #FFF;
+        }
+        .next-up-box .next-countdown {
+            font-size: 0.65rem;
+            color: #8DAA3A;
+            margin-top: 0.15rem;
+        }
+
+        /* ALERT MODAL */
+        .alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .alert-modal {
+            background: linear-gradient(160deg, #1a1a35, #0d1525);
+            border: 2px solid var(--gold);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(214, 176, 74, 0.3);
+        }
+        .alert-modal h3 {
+            color: #F5D78C;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .alert-modal .greeting {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .alert-modal .alert-msg {
+            font-size: 0.78rem;
+            color: #C5D5F0;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+        .alert-modal .alert-time {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #F5D78C;
+            margin: 0.5rem 0;
+        }
+        .alert-modal .btn-row {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .alert-modal .btn {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.75rem;
+        }
         @media (max-width: 500px) {
             .main-card {
                 padding: 1rem 0.8rem;
@@ -674,6 +848,13 @@
             }
             .pack-item-content {
                 font-size: 0.75rem;
+            }
+            .schedule-table {
+                font-size: 0.6rem;
+            }
+            .schedule-table th,
+            .schedule-table td {
+                padding: 0.25rem 0.15rem;
             }
         }
     </style>
@@ -752,14 +933,59 @@
             </div></div>
         </div>
 
-        <!-- TAB 4: BEST TIME -->
+        <!-- TAB 4: BEST TIME - WITH SCHEDULING & ALERTS -->
         <div class="tab-panel" id="tab-timing">
             <div class="time-card"><div class="time-big" id="liveTimeDisplay">--:-- --</div><div class="time-sub" id="liveDateDisplay">Loading...</div><div class="time-live" id="liveZoneDisplay">🕐 Detecting your timezone...</div></div>
+
             <label for="timingPlatform">📱 Select Platform:</label><select id="timingPlatform"><option value="tiktok">TikTok / Reels</option><option value="youtube">YouTube</option><option value="instagram">Instagram</option></select>
-            <button class="btn btn-primary" id="timingBtn" style="margin-top:0.5rem;width:100%">⏰ CALCULATE BEST POSTING TIMES</button>
-            <div id="timingResult" style="display:none;margin-top:0.5rem"><div class="result-panel"><div style="text-align:center;margin-bottom:0.6rem"><span style="font-size:0.75rem;color:#C5BFA8">🔥 BEST POSTING WINDOWS</span></div><div class="timing-grid"><div class="timing-box" style="border-left:3px solid #F5D78C"><h4>🌅 MORNING</h4><div class="time-val" id="morningWindow">--</div><div class="time-tag" id="morningTag">AM</div></div><div class="timing-box" style="border-left:3px solid #E05555"><h4>🌆 EVENING</h4><div class="time-val" id="eveningWindow">--</div><div class="time-tag" id="eveningTag">PM</div></div></div><div style="text-align:center;margin-top:0.5rem"><div style="font-size:0.7rem;color:#8A8A9A" id="timingReason"></div><div style="margin-top:0.4rem;font-size:0.75rem;color:#5CB878;font-weight:700" id="timingRecommendation"></div><div style="margin-top:0.3rem;font-size:0.65rem;color:#6B6B78" id="timingCountdown"></div></div></div></div>
+
+            <button class="btn btn-primary" id="timingBtn" style="margin-top:0.5rem;width:100%">⏰ REFRESH POSTING SCHEDULE</button>
+
+            <!-- NEXT UPCOMING WINDOW -->
+            <div class="next-up-box" id="nextUpBox">
+                <div class="next-label">⏰ NEXT UPCOMING POSTING WINDOW</div>
+                <div class="next-time" id="nextUpTime">--</div>
+                <div class="next-countdown" id="nextUpCountdown">Calculating...</div>
+            </div>
+
+            <!-- ALERT TOGGLE -->
+            <div class="alert-toggle">
+                <span>🔔 Posting Alerts</span>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-left:auto;">
+                    <span style="font-size:0.6rem;color:#8A8A9A;" id="alertStatusText">OFF</span>
+                    <div class="toggle-switch" id="alertToggle" title="Toggle posting alerts"></div>
+                </div>
+            </div>
+
+            <!-- WEEKLY SCHEDULE -->
+            <div class="result-panel" style="margin-top:0.4rem;">
+                <div style="text-align:center;margin-bottom:0.4rem;"><span style="font-size:0.7rem;color:#F5D78C;font-weight:700;">📅 WEEKLY POSTING SCHEDULE</span></div>
+                <div style="overflow-x:auto;">
+                    <table class="schedule-table" id="scheduleTable">
+                        <thead><tr><th>Day</th><th>Date</th><th>AM Window</th><th>PM Window</th><th>Best</th></tr></thead>
+                        <tbody id="scheduleBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- BEST WINDOWS -->
+            <div id="timingResult" style="margin-top:0.5rem;"><div class="result-panel"><div style="text-align:center;margin-bottom:0.6rem"><span style="font-size:0.75rem;color:#C5BFA8">🔥 BEST POSTING WINDOWS</span></div><div class="timing-grid"><div class="timing-box" style="border-left:3px solid #F5D78C"><h4>🌅 MORNING</h4><div class="time-val" id="morningWindow">--</div><div class="time-tag" id="morningTag">AM</div></div><div class="timing-box" style="border-left:3px solid #E05555"><h4>🌆 EVENING</h4><div class="time-val" id="eveningWindow">--</div><div class="time-tag" id="eveningTag">PM</div></div></div><div style="text-align:center;margin-top:0.5rem"><div style="font-size:0.7rem;color:#8A8A9A" id="timingReason"></div><div style="margin-top:0.4rem;font-size:0.75rem;color:#5CB878;font-weight:700" id="timingRecommendation"></div><div style="margin-top:0.3rem;font-size:0.65rem;color:#6B6B78" id="timingCountdown"></div></div></div></div>
         </div>
         <div class="tip-text">⚡ Light Bearers Media · Built for the LBI Media Team · From Nigeria to the Nations</div>
+    </div>
+
+    <!-- ALERT MODAL (Hidden by default) -->
+    <div class="alert-overlay" id="alertOverlay" style="display:none;">
+        <div class="alert-modal">
+            <h3>🔔 POSTING REMINDER</h3>
+            <div class="greeting" id="alertGreeting"></div>
+            <div class="alert-msg" id="alertMessage"></div>
+            <div class="alert-time" id="alertTimeWindow"></div>
+            <div class="btn-row">
+                <button class="btn btn-gold" id="alertDismissBtn">✅ Got It, Thanks!</button>
+                <button class="btn btn-outline" id="alertSnoozeBtn">⏰ Remind in 10 min</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -779,7 +1005,6 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
-    console.log('Clock started');
 
     // ==================== TAB SWITCHING ====================
     document.querySelectorAll('.tab-btn').forEach(function(b) {
@@ -850,7 +1075,6 @@
         if (t.length > 0 && !/[.!?]$/.test(t)) t = t + '.';
         return t;
     }
-    console.log('English correction ready');
 
     function setupCorrection(inputId, boxId, origId, fixedId) {
         var timeout;
@@ -1016,8 +1240,6 @@
         return result.slice(0, pl.maxHT);
     }
 
-    console.log('Generator functions ready');
-
     // ==================== TAB 1: GENERATE ====================
     var gc = 0,
         curT = '',
@@ -1077,22 +1299,18 @@
         document.getElementById('resultBox').style.display = 'block';
     }
 
-    document.getElementById('generateBtn').addEventListener('click', function() { console.log('Generate clicked');
-        render(false); });
-    document.getElementById('bulkBtn').addEventListener('click', function() { console.log('Bulk clicked');
-        render(true); });
+    document.getElementById('generateBtn').addEventListener('click', function() { render(false); });
+    document.getElementById('bulkBtn').addEventListener('click', function() { render(true); });
     document.getElementById('copyTitle').addEventListener('click', function() { copyText(curT, document.getElementById('copyTitle')); });
     document.getElementById('copyHook').addEventListener('click', function() { copyText(curHook, document.getElementById('copyHook')); });
     document.getElementById('copyHashtags').addEventListener('click', function() { copyText(curH.join(' '), document.getElementById('copyHashtags')); });
     document.getElementById('copyCaption').addEventListener('click', function() { copyText(curCap, document.getElementById('copyCaption')); });
     document.getElementById('copyCTA').addEventListener('click', function() { copyText(curCTA, document.getElementById('copyCTA')); });
     document.getElementById('copyReply').addEventListener('click', function() { copyText(curReply, document.getElementById('copyReply')); });
-    console.log('Tab 1 ready');
 
     // ==================== TAB 2: CONTENT PACK ====================
     var pd = { title: '', hook: '', caption: '', hashtags: '', cta: '', reply: '' };
     document.getElementById('packBtn').addEventListener('click', function() {
-        console.log('Pack clicked');
         var desc = getCorrectedDesc('packDesc');
         if (!desc) { alert('Please describe the miracle first.'); return; }
         gc++;
@@ -1130,9 +1348,8 @@
     document.getElementById('copyPackCTA').addEventListener('click', function() { copyText(pd.cta, document.getElementById('copyPackCTA')); });
     document.getElementById('copyPackReply').addEventListener('click', function() { copyText(pd.reply, document.getElementById('copyPackReply')); });
     document.getElementById('copyFullPack').addEventListener('click', function() { copyText(window._fp, document.getElementById('copyFullPack')); });
-    console.log('Tab 2 ready');
 
-    // ==================== TAB 3: TRANSLATE - COMPLETE ALL 8 LANGUAGES ====================
+    // ==================== TAB 3: TRANSLATE ====================
     var tl = 'fr';
     document.querySelectorAll('#transLangButtons .lang-flag-btn').forEach(function(b) {
         b.addEventListener('click', function() {
@@ -1172,7 +1389,6 @@
     }
 
     document.getElementById('translateBtn').addEventListener('click', function() {
-        console.log('Translate clicked - language:', tl);
         if (!gen.title && !gen.caption) { alert('⚠️ Generate content in Tab 1 first, then translate.'); return; }
         var lang = tl;
         var tT = translateText(gen.title, lang);
@@ -1180,7 +1396,6 @@
         var tC = translateText(gen.caption, lang);
         var tHT = translateText(gen.hashtags, lang);
         var tCTA = translateText(gen.cta, lang);
-
         if (tT) { document.getElementById('transTitle').textContent = tT;
             document.getElementById('transTitleBlock').style.display = 'block';
             window._tT = tT; } else { document.getElementById('transTitleBlock').style.display = 'none'; }
@@ -1209,23 +1424,204 @@
     document.getElementById('copyTransCaption').addEventListener('click', function() { copyText(window._tC, document.getElementById('copyTransCaption')); });
     document.getElementById('copyTransHashtags').addEventListener('click', function() { copyText(window._tHT, document.getElementById('copyTransHashtags')); });
     document.getElementById('copyTransCTA').addEventListener('click', function() { copyText(window._tCTA, document.getElementById('copyTransCTA')); });
-    console.log('Tab 3 ready - All 8 languages loaded');
 
-    // ==================== TAB 4: BEST TIME ====================
+    // ==================== TAB 4: BEST TIME WITH SCHEDULING & ALERTS ====================
+    var alertsEnabled = false;
+    var alertCheckInterval = null;
+    var lastAlertTime = null;
+    var snoozedUntil = null;
+
+    // Toggle alerts
+    document.getElementById('alertToggle').addEventListener('click', function() {
+        alertsEnabled = !alertsEnabled;
+        var toggle = document.getElementById('alertToggle');
+        var statusText = document.getElementById('alertStatusText');
+        if (alertsEnabled) {
+            toggle.classList.add('active');
+            statusText.textContent = 'ON';
+            startAlertChecking();
+        } else {
+            toggle.classList.remove('active');
+            statusText.textContent = 'OFF';
+            stopAlertChecking();
+        }
+    });
+
+    // Alert dismissal
+    document.getElementById('alertDismissBtn').addEventListener('click', function() {
+        document.getElementById('alertOverlay').style.display = 'none';
+        lastAlertTime = new Date().getTime();
+    });
+
+    // Snooze
+    document.getElementById('alertSnoozeBtn').addEventListener('click', function() {
+        document.getElementById('alertOverlay').style.display = 'none';
+        snoozedUntil = new Date().getTime() + (10 * 60 * 1000); // 10 minutes
+    });
+
+    function startAlertChecking() {
+        if (alertCheckInterval) clearInterval(alertCheckInterval);
+        alertCheckInterval = setInterval(checkAlerts, 30000); // Check every 30 seconds
+        checkAlerts(); // Check immediately
+    }
+
+    function stopAlertChecking() {
+        if (alertCheckInterval) { clearInterval(alertCheckInterval);
+            alertCheckInterval = null; }
+    }
+
+    function checkAlerts() {
+        if (!alertsEnabled) return;
+        var now = new Date().getTime();
+        if (snoozedUntil && now < snoozedUntil) return;
+        if (lastAlertTime && (now - lastAlertTime) < 5 * 60 * 1000) return; // Don't alert within 5 min of last dismissal
+
+        var nextWindow = getNextPostingWindow();
+        if (!nextWindow) return;
+        var minutesUntilStart = Math.floor((nextWindow.startTime - now) / 60000);
+        var minutesUntilEnd = Math.floor((nextWindow.endTime - now) / 60000);
+
+        // Alert 15 minutes before window opens OR 30 minutes before window closes
+        if ((minutesUntilStart > 0 && minutesUntilStart <= 15) || (minutesUntilEnd > 0 && minutesUntilEnd <= 30 && minutesUntilStart <= 0)) {
+            showAlert(nextWindow, minutesUntilStart, minutesUntilEnd);
+        }
+    }
+
+    function getNextPostingWindow() {
+        var now = new Date();
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        var day = now.getDay(); // 0=Sun, 1=Mon...
+        var ch = now.getHours(),
+            cm = now.getMinutes();
+        var platform = document.getElementById('timingPlatform').value;
+        var allWindows = {
+            tiktok: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM' }, pm: { s: 18, e: 21, label: '6:00 PM – 9:00 PM' } },
+            youtube: { am: { s: 8, e: 10, label: '8:00 AM – 10:00 AM' }, pm: { s: 18, e: 21, label: '6:00 PM – 9:00 PM' } },
+            instagram: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM' }, pm: { s: 19, e: 21, label: '7:00 PM – 9:00 PM' } }
+        };
+        var w = allWindows[platform] || allWindows.tiktok;
+        var curMins = ch * 60 + cm;
+        var amS = w.am.s * 60,
+            pmS = w.pm.s * 60;
+
+        var windowStart, windowEnd, windowLabel;
+        if (curMins < amS) { windowStart = amS;
+            windowEnd = w.am.e * 60;
+            windowLabel = w.am.label; } else if (curMins < pmS) { windowStart = pmS;
+            windowEnd = w.pm.e * 60;
+            windowLabel = w.pm.label; } else { windowStart = amS + (24 * 60);
+            windowEnd = w.am.e * 60 + (24 * 60);
+            windowLabel = w.am.label + ' (Tomorrow)'; }
+
+        var startDate = new Date(now);
+        startDate.setHours(0, windowStart, 0, 0);
+        if (windowStart >= 24 * 60) startDate.setDate(startDate.getDate() + 1);
+        var endDate = new Date(now);
+        endDate.setHours(0, windowEnd, 0, 0);
+        if (windowEnd >= 24 * 60) endDate.setDate(endDate.getDate() + 1);
+
+        return { startTime: startDate.getTime(), endTime: endDate.getTime(), label: windowLabel, day: day, tz: tz };
+    }
+
+    function showAlert(nextWindow, minsToStart, minsToEnd) {
+        var now = new Date();
+        var greetings = [
+            '🔥 Harvest Greetings, Diplomat!',
+            '🌾 Mega Harvest Greetings, Diplomat!',
+            '⚡ Kingdom Greetings, Diplomat of Glory!',
+            '🙌 Harvest Season Greetings, Diplomat!',
+            '💥 Supernatural Harvest Greetings, Diplomat!',
+            '🌟 Global Harvest Greetings, Diplomat!'
+        ];
+        var greeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+        var msg;
+        if (minsToStart > 0) {
+            msg = 'Your next posting window opens in <strong>' + minsToStart + ' minutes</strong>! Get your content ready to upload. The algorithm rewards timely posting.';
+        } else {
+            msg = 'Your posting window is closing in <strong>' + minsToEnd + ' minutes</strong>! Post now to get maximum views and engagement before the window closes.';
+        }
+
+        document.getElementById('alertGreeting').textContent = greeting;
+        document.getElementById('alertMessage').innerHTML = msg;
+        document.getElementById('alertTimeWindow').textContent = nextWindow.label;
+        document.getElementById('alertOverlay').style.display = 'flex';
+        lastAlertTime = now.getTime();
+    }
+
+    // Build weekly schedule
+    function updateSchedule() {
+        var now = new Date();
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        var today = now.getDay(); // 0=Sun
+        var platform = document.getElementById('timingPlatform').value;
+        var allWindows = {
+            tiktok: { am: { s: 11, e: 13, label: '11AM-1PM' }, pm: { s: 18, e: 21, label: '6PM-9PM' } },
+            youtube: { am: { s: 8, e: 10, label: '8AM-10AM' }, pm: { s: 18, e: 21, label: '6PM-9PM' } },
+            instagram: { am: { s: 11, e: 13, label: '11AM-1PM' }, pm: { s: 19, e: 21, label: '7PM-9PM' } }
+        };
+        var w = allWindows[platform] || allWindows.tiktok;
+        var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var tbody = document.getElementById('scheduleBody');
+        tbody.innerHTML = '';
+
+        for (var d = 0; d < 7; d++) {
+            var date = new Date(now);
+            date.setDate(date.getDate() + (d - today));
+            var dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            var isToday = (d === today);
+            var row = document.createElement('tr');
+            if (isToday) row.className = 'today-row';
+            row.innerHTML = '<td class="day-name">' + (isToday ? '⭐ ' : '') + dayNames[d] + '</td>' +
+                '<td>' + dateStr + '</td>' +
+                '<td><span class="window-text">' + w.am.label + '</span></td>' +
+                '<td><span class="window-text">' + w.pm.label + '</span></td>' +
+                '<td>' + (isToday ? '🔥 Today' : '') + '</td>';
+            tbody.appendChild(row);
+        }
+    }
+
+    // Update next upcoming window
+    function updateNextUp() {
+        var nextWindow = getNextPostingWindow();
+        if (!nextWindow) return;
+        var now = new Date().getTime();
+        var minsUntil = Math.floor((nextWindow.startTime - now) / 60000);
+        var hoursUntil = Math.floor(minsUntil / 60);
+        var remainingMins = minsUntil % 60;
+
+        document.getElementById('nextUpTime').textContent = nextWindow.label;
+        if (minsUntil > 60) {
+            document.getElementById('nextUpCountdown').textContent = '⏰ Opens in ' + hoursUntil + ' hours and ' + remainingMins + ' minutes';
+        } else if (minsUntil > 0) {
+            document.getElementById('nextUpCountdown').textContent = '⚡ Opens in ' + minsUntil + ' minutes — get ready!';
+        } else {
+            var minsUntilEnd = Math.floor((nextWindow.endTime - now) / 60000);
+            if (minsUntilEnd > 0) {
+                document.getElementById('nextUpCountdown').textContent = '🔴 LIVE NOW — Window closes in ' + minsUntilEnd + ' minutes!';
+            } else {
+                document.getElementById('nextUpCountdown').textContent = '⏰ Next window tomorrow';
+            }
+        }
+    }
+
+    // Refresh schedule every minute
+    setInterval(function() {
+        updateSchedule();
+        updateNextUp();
+        if (alertsEnabled) checkAlerts();
+    }, 60000);
+
     document.getElementById('timingBtn').addEventListener('click', function() {
-        console.log('Timing clicked');
         var now = new Date(),
             tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         var ch = now.getHours(),
             cm = now.getMinutes();
         var platform = document.getElementById('timingPlatform').value;
         var allWindows = {
-            tiktok: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM', tag: 'Late Morning' }, pm: { s: 18, e: 21,
-                    label: '6:00 PM – 9:00 PM', tag: 'Evening Peak' } },
-            youtube: { am: { s: 8, e: 10, label: '8:00 AM – 10:00 AM', tag: 'Morning Watch' }, pm: { s: 18, e: 21,
-                    label: '6:00 PM – 9:00 PM', tag: 'Prime Time' } },
-            instagram: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM', tag: 'Lunch Break' }, pm: { s: 19, e: 21,
-                    label: '7:00 PM – 9:00 PM', tag: 'Post-Work' } }
+            tiktok: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM', tag: 'Late Morning' }, pm: { s: 18, e: 21, label: '6:00 PM – 9:00 PM', tag: 'Evening Peak' } },
+            youtube: { am: { s: 8, e: 10, label: '8:00 AM – 10:00 AM', tag: 'Morning Watch' }, pm: { s: 18, e: 21, label: '6:00 PM – 9:00 PM', tag: 'Prime Time' } },
+            instagram: { am: { s: 11, e: 13, label: '11:00 AM – 1:00 PM', tag: 'Lunch Break' }, pm: { s: 19, e: 21, label: '7:00 PM – 9:00 PM', tag: 'Post-Work' } }
         };
         var w = allWindows[platform] || allWindows.tiktok;
         document.getElementById('morningWindow').textContent = w.am.label;
@@ -1245,16 +1641,23 @@
             cd = (24 * 60) - curMins + amS; }
         var dh = Math.floor(cd / 60),
             dm = cd % 60;
-        document.getElementById('timingReason').textContent = 'Based on your current time (' + now.toLocaleTimeString(
-            'en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) + ') in ' + tz + '.';
-        document.getElementById('timingRecommendation').textContent = '✅ RECOMMENDED: Post during the ' + label +
-            ' window — ' + next.label;
-        document.getElementById('timingCountdown').textContent = '⏰ Next window opens in approximately ' + dh +
-            ' hours and ' + dm + ' minutes.';
+        document.getElementById('timingReason').textContent = 'Based on your current time (' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) + ') in ' + tz + '.';
+        document.getElementById('timingRecommendation').textContent = '✅ RECOMMENDED: Post during the ' + label + ' window — ' + next.label;
+        document.getElementById('timingCountdown').textContent = '⏰ Next window opens in approximately ' + dh + ' hours and ' + dm + ' minutes.';
         document.getElementById('timingResult').style.display = 'block';
+
+        // Update schedule and next up
+        updateSchedule();
+        updateNextUp();
     });
-    console.log('Tab 4 ready');
-    console.log('LBM Viral Engine - All systems ready!');
+
+    // Initialize schedule on load
+    setTimeout(function() {
+        updateSchedule();
+        updateNextUp();
+    }, 500);
+
+    console.log('LBM Viral Engine - All systems ready with scheduling & alerts!');
     </script>
 </body>
 </html>
